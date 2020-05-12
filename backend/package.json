@@ -1,0 +1,30 @@
+{
+  "name": "sociallydistanced-backend",
+  "private": true,
+  "version": "0.0.0",
+  "description": "This folder contains the backend API for sociallydistanced.",
+  "main": "src/index.js",
+  "scripts": {
+		"start-dev": "nodemon src/index.js",
+		"start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyralmozley/sociallydistanced.git"
+  },
+  "author": "Elliott Mozley @ElliottLMz",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kyralmozley/sociallydistanced/issues"
+  },
+  "homepage": "https://github.com/kyralmozley/sociallydistanced#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
