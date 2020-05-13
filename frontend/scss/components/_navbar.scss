@@ -1,0 +1,24 @@
+.sd-navbar {
+	background-color: $sd-colour-mid-grey;
+}
+
+.sd-navbar--link {
+	border-bottom: 0.1rem solid transparent;
+
+	&:hover {
+		border-bottom: 0.1rem solid $sd-colour-black;
+	}
+
+	&:active,
+	&:focus {
+		border-bottom: 0.1rem solid $sd-colour-black;
+		background-color: $sd-colour-yellow;
+	}
+}
+
+.sd-navbar--footer {
+	background-color: $sd-colour-red;
+	margin-bottom: 1rem;
+	width: 100%;
+	height: 0.3rem;
+}
