@@ -54,7 +54,14 @@ module.exports = async () => {
 	 * Error handler
 	 */
 	app.use((err, req, res, next) => {
-		//const err = res.error
+		/**
+		 * Catch errors from celebrate and give them the 400 error code.
+		 * This is to help clients, because celebrate doesn't add a status code.
+		 */
+		if (err.joi) {
+			err.status = 400
+		}
+
 		/**
 		 * Return specified status code.
 		 * @default 500 (Internal Server Error)

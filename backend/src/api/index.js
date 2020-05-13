@@ -1,6 +1,6 @@
 const { Router } = require("express")
 
-const stats = require("./routes/stats")
+const main = require("./routes/main")
 
 module.exports = () => {
 	const app = Router()
@@ -8,7 +8,7 @@ module.exports = () => {
 	/**
 	 * Load the routes
 	 */
-	stats(app)
+	main(app)
 
 	return app
 }
