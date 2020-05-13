@@ -1,0 +1,31 @@
+{
+	"name": "sociallydistanced-frontend-dev-server",
+	"version": "0.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"start-dev": "nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kyralmozley/sociallydistanced.git"
+	},
+	"author": "Elliott Mozley",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/kyralmozley/sociallydistanced/issues"
+	},
+	"homepage": "https://github.com/kyralmozley/sociallydistanced#readme",
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-nunjucks": "^2.2.5",
+		"morgan": "^1.10.0",
+		"nunjucks": "^3.2.1",
+		"sass": "^1.26.5"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.3"
+	}
+}
