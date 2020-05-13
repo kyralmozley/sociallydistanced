@@ -1,3 +1,5 @@
+"use strict"
+
 const { Router } = require("express")
 
 const main = require("./routes/main")
