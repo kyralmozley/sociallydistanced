@@ -44,23 +44,17 @@ module.exports = async () => {
 	 * Catch 404 and pass to error handler
 	 */
 	app.use((req, res, next) => {
-    const err = new Error("Not Found")
-    err.status = 404
-		
-		/**
-		 * next(err) is more ideal, but it doesn't seem to be working.
-		 * I'll take a closer look soon:tm:
-		 * @todo fix this
-		 */
-		res.error = err
-		next()
+		const err = new Error("Not Found")
+		err.status = 404
+
+		next(err)
 	})
-	
+
 	/**
 	 * Error handler
 	 */
-	app.use((req, res) => {
-		const err = res.error
+	app.use((err, req, res, next) => {
+		//const err = res.error
 		/**
 		 * Return specified status code.
 		 * @default 500 (Internal Server Error)
@@ -68,8 +62,8 @@ module.exports = async () => {
 		res.status(err.status || 500)
 		res.json({
 			errors: {
-				message: err.message
-			}
+				message: err.message,
+			},
 		})
 	})
 

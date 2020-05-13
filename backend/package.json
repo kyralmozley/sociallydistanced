@@ -5,8 +5,8 @@
   "description": "This folder contains the backend API for sociallydistanced.",
   "main": "src/index.js",
   "scripts": {
-		"start-dev": "nodemon src/index.js",
-		"start": "node src/index.js"
+    "start-dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
