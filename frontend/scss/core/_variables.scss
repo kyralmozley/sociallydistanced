@@ -1,0 +1,37 @@
+// Colour scheme
+$sd-colour-red: #e14a4e !default;
+$sd-colour-orange: #ee8632 !default;
+$sd-colour-yellow: #f7c117 !default;
+$sd-colour-lime: #9cbd38 !default;
+$sd-colour-green: #4fb373 !default;
+
+$sd-colour-turquoise: #4fb3b0 !default;
+$sd-colour-blue: #4f8eb3 !default;
+$sd-colour-bluish: #4f7cb3 !default;
+$sd-colour-purple: #7f4fb3 !default;
+$sd-colour-pink: #b34fb1 !default;
+
+$sd-colour-black: #0b0c0c !default;
+$sd-colour-dark-grey: #626a6e !default;
+$sd-colour-mid-grey: #b1b4b6 !default;
+$sd-colour-light-grey: #f3f2f1 !default;
+$sd-colour-white: #ffffff !default;
+
+// Colour maps
+$sd-primary-colours: (
+	"red": $sd-colour-red,
+	"orange": $sd-colour-orange,
+	"yellow": $sd-colour-yellow,
+	"lime": $sd-colour-lime,
+	"green": $sd-colour-green,
+) !default;
+
+$sd-extended-colours: (
+	"turquoise": $sd-colour-turquoise,
+	"blue": $sd-colour-blue,
+	"bluish": $sd-colour-bluish,
+	"purple": $sd-colour-purple,
+	"pink": $sd-colour-pink,
+) !default;
+
+$sd-all-colours: map-merge($sd-primary-colours, $sd-extended-colours);

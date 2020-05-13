@@ -1,0 +1,19 @@
+/// Add as needed. Don't add utils that aren't going to be used.
+
+// Colour
+@each $name, $colour in $sd-all-colours {
+	.sd-bg-#{$name} {
+		background-color: $colour;
+	}
+}
+
+@each $name, $colour in $sd-all-colours {
+	.sd-c-#{$name} {
+		color: $colour;
+	}
+}
+
+// Text align
+.sd-ta-center {
+	text-align: center;
+}

@@ -1,3 +1,5 @@
+"use strict"
+
 const express = require("express")
 const morgan = require("morgan")
 const bodyParser = require("body-parser")
@@ -44,23 +46,24 @@ module.exports = async () => {
 	 * Catch 404 and pass to error handler
 	 */
 	app.use((req, res, next) => {
-    const err = new Error("Not Found")
-    err.status = 404
-		
-		/**
-		 * next(err) is more ideal, but it doesn't seem to be working.
-		 * I'll take a closer look soon:tm:
-		 * @todo fix this
-		 */
-		res.error = err
-		next()
+		const err = new Error("Not Found")
+		err.status = 404
+
+		next(err)
 	})
-	
+
 	/**
 	 * Error handler
 	 */
-	app.use((req, res) => {
-		const err = res.error
+	app.use((err, req, res, next) => {
+		/**
+		 * Catch errors from celebrate and give them the 400 error code.
+		 * This is to help clients, because celebrate doesn't add a status code.
+		 */
+		if (err.joi) {
+			err.status = 400
+		}
+
 		/**
 		 * Return specified status code.
 		 * @default 500 (Internal Server Error)
@@ -68,8 +71,8 @@ module.exports = async () => {
 		res.status(err.status || 500)
 		res.json({
 			errors: {
-				message: err.message
-			}
+				message: err.message,
+			},
 		})
 	})
 

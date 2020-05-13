@@ -1,3 +1,5 @@
+"use strict"
+
 const expressLoader = require("./express")
 
 /**
