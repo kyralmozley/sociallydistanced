@@ -8,9 +8,9 @@ import requests
 
 '''
 Map the weather response code to the probability of going out
-Note: this is currently done purely on my judgement 
+Note: this is currently done purely on my judgement
 1 = I'm going out to have a BBQ and beer right now
-0.1 = not going outside staying in bed 
+0.1 = not going outside staying in bed
 (0.1 rather than 0 for smoothing reasons)
 '''
 weather_dictionary = {
@@ -140,15 +140,6 @@ def getWeather(lat, lon):
 
 def convertOpenHours(data):
     try:
-        '''
-        data = ['Monday: 5:00 AM – 12:00 AM',
-                'Tuesday: 5:00 AM – 12:00 AM',
-                'Wednesday: 5:00 AM – 12:00 AM',
-                'Thursday: 5:00 AM – 12:00 AM',
-                'Friday: 5:00 AM – 12:00 AM',
-                'Saturday: 5:00 AM – 12:00 AM',
-                'Sunday: 5:00 AM – 12:00 AM']
-        '''
         today = data[datetime.date.today().weekday()]
         today = today.split("day: ")[1].split(" – ")
         open = today[0].split(" ")
