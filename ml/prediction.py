@@ -1,4 +1,5 @@
 import datetime
+import math
 
 import getData
 
@@ -32,8 +33,17 @@ def makePrediction(placeID):
     if 'park' in place:
         weather_weighting = 0.8
 
+    name = getData.getPlaceName()
+    name= name.split("-")[0]
+    trend_weight = getData.getTrends(name)
+    if trend_weight == 0:
+        # assume something went wrong in finding the trend, do nothing
+        trend_weight = 1
+    else:
+        trend_weight = math.log(trend_weight+1, 10)
+
     combine = [a * b for a, b in zip(combine, google_ranking[0])]
-    combine = [i * weather_weighting for i in combine]
+    combine = [i * weather_weighting * trend_weight for i in combine]
 
 
     for x in range(0, int(openhours[0])):
@@ -43,7 +53,7 @@ def makePrediction(placeID):
             combine[x] = 0
 
     shift = datetime.date.today().weekday()
-    currentPrediction = google_ranking[1] * temps[shift] * forecast[shift] * chance_rain[shift]
+    currentPrediction = google_ranking[1] * temps[shift] * forecast[shift] * chance_rain[shift] * weather_weighting * trend_weight
     day_forecast = combine
 
 

@@ -3,9 +3,9 @@ import json
 import populartimes
 import APIKey
 import datetime
-
+from pytrends.request import TrendReq
 import requests
-
+import pandas as pd
 '''
 Map the weather response code to the probability of going out
 Note: this is currently done purely on my judgement 
@@ -137,6 +137,21 @@ def getWeather(lat, lon):
 
     return [temps, forecast, chanceRain]
 
+def getTrends(name):
+    try:
+        pytrends = TrendReq(hl='en-US', tz=360)
+        kw_list = [name]
+        pytrends.build_payload(kw_list, cat=0, timeframe='today 3-m', geo='GB-ENG', gprop='')
+        day_value = pytrends.interest_over_time().iloc[-1,0] # yesterdays score (sadly doesnt give todays)
+
+        pytrends.build_payload(kw_list, cat=0, timeframe='now 7-d', geo='GB-ENG', gprop='')
+        day_trends = pytrends.interest_over_time().tail(24).mean()
+
+        mean = int(2*(day_value*day_trends)/(day_value+day_trends))
+        print(mean)
+        return mean
+    except:
+        return 0
 
 def convertOpenHours(data):
     try:
