@@ -14,7 +14,7 @@ def reply(placeID):
     prediction.makePrediction(placeID)
     raiting = prediction.getCurrentPrediction()
     day_forecast = prediction.getDayForecast()
-    print(raiting, day_forecast)
+    #print(raiting, day_forecast)
 
     response = {
         'raiting': raiting,
@@ -22,7 +22,8 @@ def reply(placeID):
     }
 
     r = requests.post("http://localhost:80", json=response)
-    print(r)
+    #print(r)
+    return r
 
 
 
