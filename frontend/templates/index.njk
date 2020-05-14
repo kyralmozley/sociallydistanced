@@ -8,26 +8,40 @@
 	</div>
 </noscript>
 
-<div class="container landing d-none sd-ta-center">
+<div class="container landing d-none text-center">
 	<label for="basic-url">Place ID</label>
 	<div class="input-group mb-3">
 		<input type="text" class="form-control landing-place-input" id="basic-url" aria-describedby="basic-addon3">
 	</div>
 
 	<a href="#" class="btn btn-primary landing-go-btn">Go</a>
+
+	<hr/>
+
+	<div class="text-left">
+		<p class="lead">Example place IDs:</p>
+		<ul>
+			<li><b>Hyde Park:</b> ChIJhRoYKUkFdkgRDL20SU9sr9E</li>
+			<li><b>Regent's Park:</b> ChIJc8TTcd8adkgRcx43bnFBKPU</li>
+			<li><b>Caledonian Park:</b> ChIJ0W1MGhIbdkgRT_FuhKAdeng</li>
+			<li><b>Euston Station:</b> ChIJnZPcNCQbdkgRBQvh0P46MnM</li>
+			<li><b>Premier Inn St Pancras:</b> ChIJFXsRGTsbdkgRiNfOPIM08pE</li>
+		</ul>
+	</div>
 </div>
 
-<div class="container result d-none">
-	<!-- TODO: Add a 'Back' button -->
-	<h1 class="result-title sd-ta-center">Place title</h1>
+<div class="container result mt-2 d-none">
+	<a href="#" class="back-link">&lsaquo; Back</a>
+
+	<h1 class="result-title text-center">Place title</h1>
 	<div class="result-map"><p>Map</p></div>
 
-	<p class="result-prediction sd-ta-center">Current Prediction: ABC</p>
-	<p class="result-description sd-ta-center" id="sd--description">You should be able to safely social distance assuming a 4m^2 space per person.</p>
+	<p class="result-prediction text-center">Current Prediction: ABC</p>
+	<p class="result-description" id="sd--description">You should be able to safely social distance assuming a 4m^2 space per person.</p>
 
 	<div class="result-graph"><p>Graph</p></div>
 
-	<div class="result-feedback sd-ta-center">
+	<div class="result-feedback text-center">
 		<p class="text-secondary result-feedback-text">Does this seem right?</p>
 		<div class="result-feedback-buttons">
 			<a href="#" class="btn btn-sm btn-outline-secondary result-feedback-positive">Yes</a>
@@ -35,7 +49,7 @@
 		</div>
 	</div>
 
-	<div class="result-feedback-2 sd-ta-center d-none">
+	<div class="result-feedback-2 text-center d-none">
 		<p class="feedback-2-text">Which level seems right?</p>
 		<button type="button" class="btn feedback-button-green feedback-button" data-level="0">1</button>
 		<button type="button" class="btn feedback-button-lime feedback-button" data-level="1">2</button>

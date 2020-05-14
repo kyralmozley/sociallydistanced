@@ -10,13 +10,10 @@
     <title>{{ title | default("Socially Distanced")}}</title>
 
 		<script>
-		// @TODO implement nunjucks ENV variables
 			window.GLOBAL_ENV = {
-				ENVIRONMENT: "development",
-				API_BASE_URI: "http://localhost:3000/api",
+				ENVIRONMENT: "{{ ENV | default('development') }}",
+				API_BASE_URI: "{{ BASE_URI | default('http://localhost:3000') }}",
 			}
-			window.GLOBAL_ENV.API_ENDPOINT_PLACE =
-				window.GLOBAL_ENV.API_BASE_URI + "/main/place"
 		</script>
   </head>
   <body class="sd-body">

@@ -4,6 +4,11 @@
  */
 ;(function () {
 	/**
+	 * Browser-side cache
+	 */
+	var cache = {}
+
+	/**
 	 * Object containing string templates
 	 */
 	var strings = {
@@ -19,6 +24,11 @@
 		description_2: "You can probably safely social distance at this location",
 		description_3: "It is unlikely that you will be able to safely social distance",
 		description_4: "You cannot safely social distance at this location",
+
+		go_btn_default: "Go",
+		go_btn_loading:
+			'<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>' +
+			"&nbsp;Loading...",
 	}
 
 	/**
@@ -131,13 +141,25 @@
 	 * @param {String} placeId Google Maps API place ID
 	 */
 	function search(placeId) {
-		$.ajax({
-			url: window.GLOBAL_ENV.API_ENDPOINT_PLACE + "?placeId=" + placeId,
-			crossDomain: true,
-			success: function (data) {
-				showPrediction(data)
-			},
-		})
+		if (typeof cache[placeId] == "object") {
+			$(".landing-go-btn").html(strings.go_btn_default)
+			$(".landing-go-btn").removeClass("disabled")
+			showPrediction(cache[placeId])
+		} else {
+			$(".landing-go-btn").html(strings.go_btn_loading)
+			$(".landing-go-btn").addClass("disabled")
+
+			$.ajax({
+				url: window.GLOBAL_ENV.API_BASE_URI + "/main/place?placeId=" + placeId,
+				crossDomain: true,
+				success: function (data) {
+					$(".landing-go-btn").html(strings.go_btn_default)
+					$(".landing-go-btn").removeClass("disabled")
+					showPrediction(data)
+					cache[placeId] = data
+				},
+			})
+		}
 	}
 
 	/**
@@ -163,6 +185,12 @@
 		$(".feedback-button").on("click", function (event) {
 			event.preventDefault()
 			onFeedback2($(this).data("level"))
+		})
+
+		$(".back-link").on("click", function (event) {
+			event.preventDefault()
+			$(".result").css("display", "none")
+			$(".landing").css("display", "block")
 		})
 	}
 
