@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # 1. Copy/paste this file
 # 2. Fill in your API keys
 # 3. Rename it to 'APIKey.py'
