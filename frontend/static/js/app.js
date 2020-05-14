@@ -31,6 +31,8 @@
 			"&nbsp;Loading...",
 	}
 
+	var currentPlaceId = 1
+
 	/**
 	 * Handles feedback
 	 * @param {bool} isPositive If the feedback is 'Yes'
@@ -48,6 +50,12 @@
 			// show the 'Thanks for your feedback!' text
 			$(".result-feedback-thanks").removeClass("d-none")
 			$(".result-feedback-2").removeClass("d-none")
+
+			$.ajax({
+				url: window.GLOBAL_ENV.API_BASE_URI + "/feedback/positive?placeId=" + currentPlaceId,
+				crossDomain: true,
+				method: "POST",
+			})
 		} else {
 			$(".result-feedback-buttons").css("display", "none")
 			$(".result-feedback-2").removeClass("d-none")
@@ -61,9 +69,16 @@
 		$(".feedback-2-text").css("display", "none")
 		$(".result-feedback-text").css("display", "block")
 
-		/**
-		 * @todo send to server
-		 */
+		$.ajax({
+			url:
+				window.GLOBAL_ENV.API_BASE_URI +
+				"/feedback/negative?placeId=" +
+				currentPlaceId +
+				"&level=" +
+				level,
+			crossDomain: true,
+			method: "POST",
+		})
 	}
 
 	/**
@@ -126,8 +141,9 @@
 		}
 
 		$(".result-title").text("Place ID: " + data.placeId)
+		currentPlaceId = data.placeId
 
-		// window.ctx_api.renderForecast(data.graphPoints)
+		window.ctx_api.renderForecast(data.graphPoints)
 		/**
 		 * @todo map and graph (chart.js)
 		 */
