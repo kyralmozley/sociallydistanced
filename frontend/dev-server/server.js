@@ -36,6 +36,10 @@ app.set("view engine", "njk")
 nunjucks(app, {
 	watch: isDev,
 	noCache: isDev,
+	globals: {
+		env: process.env.ENV,
+		BASE_URI: process.env.BASE_URI,
+	},
 })
 
 /**

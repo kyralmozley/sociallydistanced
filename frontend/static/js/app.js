@@ -150,7 +150,7 @@
 			$(".landing-go-btn").addClass("disabled")
 
 			$.ajax({
-				url: window.GLOBAL_ENV.API_ENDPOINT_PLACE + "?placeId=" + placeId,
+				url: window.GLOBAL_ENV.API_BASE_URI + "/main/place?placeId=" + placeId,
 				crossDomain: true,
 				success: function (data) {
 					$(".landing-go-btn").html(strings.go_btn_default)
