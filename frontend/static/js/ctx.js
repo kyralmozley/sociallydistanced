@@ -68,7 +68,7 @@
 						},
 						ticks: {
 							callback: function (value) {
-								return (value * 100).toFixed(0) + "%" // convert it to percentage
+								return value * 100 + "%" // convert it to percentage
 							},
 						},
 					},
