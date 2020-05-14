@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 const dotenv = require("dotenv")
 
@@ -20,7 +20,7 @@ module.exports = {
 	/**
 	 * The application is hosted on this port.
 	 */
-	port: parseInt(process.env.PORT, 10),
+	port: parseInt(process.env.PORT, 10) || 3000,
 
 	/**
 	 * The node environment
