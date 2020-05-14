@@ -2,6 +2,7 @@
 
 const { Router } = require("express")
 const { celebrate, Joi } = require("celebrate")
+const python = require("../../helpers/python")
 
 const route = Router()
 
@@ -20,18 +21,25 @@ module.exports = (api) => {
 				placeId: Joi.string().required(),
 			}),
 		}),
-		(req, res) => {
+		(req, res, next) => {
 			const { placeId } = req.query
-			res.json({
-				prediction: 0,
-				// estimated_capacity: 2,
-				placeId, // echo placeId back to client
 
-				/**
-				 * @todo python stuff
-				 */
-				graphPoints: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-			})
+			/**
+			 * @todo implement caching with Redis
+			 */
+
+			python(placeId)
+				.then((data) => {
+					res.json({
+						prediction: data.rating,
+						// estimated_capacity: 2, // @TODO
+						placeId, // echo placeId back to client
+						graphPoints: data.day_forecast,
+					})
+				})
+				.catch((err) => {
+					next(err)
+				})
 		}
 	)
 
