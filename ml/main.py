@@ -2,14 +2,16 @@
 Receive and generate requests to speak to the website
 author: Kyra Mozley
 '''
+import sys
+
 import requests
 import json
 
 import prediction
 
 
-def reply():
-    prediction.makePrediction("ChIJL7CVDxgbdkgRnNimu0Q_Otc")
+def reply(placeID):
+    prediction.makePrediction(placeID)
     raiting = prediction.getCurrentPrediction()
     day_forecast = prediction.getDayForecast()
     print(raiting, day_forecast)
@@ -26,4 +28,6 @@ def reply():
 
 
 if __name__ == "__main__":
-    reply()
+    reply(sys.argv[1])
+    # reply("ChIJL7CVDxgbdkgRnNimu0Q_Otc")
+

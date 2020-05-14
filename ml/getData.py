@@ -75,6 +75,7 @@ def getPopularTimes(placeID):
     api_key = APIKey.getGoogleAPIKey()
 
     pop_times = populartimes.get_id(api_key, placeID)
+    pprint.pprint(pop_times)
 
     if 'populartimes' in pop_times:
         # return the prediction for today's forecast courtesy of Google Maps
