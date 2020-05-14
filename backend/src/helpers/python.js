@@ -11,7 +11,6 @@ const pyMain = path.join(__dirname, "..", "..", "..", "ml", "main.py")
  */
 module.exports = (placeId) => {
 	return new Promise((resolve, reject) => {
-		console.log(pyMain, placeId)
 		const py = spawn("python", [pyMain, placeId])
 
 		py.stdout.on("data", (json) => {
