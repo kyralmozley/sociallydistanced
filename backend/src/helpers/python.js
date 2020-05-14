@@ -19,6 +19,7 @@ module.exports = (placeId) => {
 		})
 
 		py.stderr.on("data", (err) => {
+			console.log(`Python Error: ${err}`)
 			reject(err)
 		})
 	})
