@@ -140,15 +140,6 @@ def getWeather(lat, lon):
 
 def convertOpenHours(data):
     try:
-        '''
-        data = ['Monday: 5:00 AM – 12:00 AM',
-                'Tuesday: 5:00 AM – 12:00 AM',
-                'Wednesday: 5:00 AM – 12:00 AM',
-                'Thursday: 5:00 AM – 12:00 AM',
-                'Friday: 5:00 AM – 12:00 AM',
-                'Saturday: 5:00 AM – 12:00 AM',
-                'Sunday: 5:00 AM – 12:00 AM']
-        '''
         today = data[datetime.date.today().weekday()]
         today = today.split("day: ")[1].split(" – ")
         open = today[0].split(" ")
@@ -168,3 +159,6 @@ def convertOpenHours(data):
 
 def getPlaceName():
     return name
+
+def getTypePlace():
+    return type_place
