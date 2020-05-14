@@ -37,4 +37,5 @@ def getCurrentPrediction():
 
 
 def getDayForecast():
-    return [i * 1.5 for i in day_forecast]
+    new = [i * 1.5 for i in day_forecast]
+    return [int(i) for i in new]
