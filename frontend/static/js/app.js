@@ -13,11 +13,11 @@
 	 */
 	var strings = {
 		prediction_prefix: "Current prediction: ",
-		prediction_0: "1",
-		prediction_1: "2",
-		prediction_2: "3",
-		prediction_3: "4",
-		prediction_4: "5",
+		prediction_0: "1/5",
+		prediction_1: "2/5",
+		prediction_2: "3/5",
+		prediction_3: "4/5",
+		prediction_4: "5/5",
 
 		description_0: "You can safely social distance at this location",
 		description_1: "You should be able to safely social distance at this location",
@@ -29,7 +29,11 @@
 		go_btn_loading:
 			'<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>' +
 			"&nbsp;Loading...",
+
+		error: '<div class="alert alert-danger mt-3" role="alert">Server Error. Please try again.</div>'
 	}
+
+	var currentPlaceId = 1
 
 	/**
 	 * Handles feedback
@@ -48,6 +52,12 @@
 			// show the 'Thanks for your feedback!' text
 			$(".result-feedback-thanks").removeClass("d-none")
 			$(".result-feedback-2").removeClass("d-none")
+
+			$.ajax({
+				url: window.GLOBAL_ENV.API_BASE_URI + "/feedback/positive?placeId=" + currentPlaceId,
+				crossDomain: true,
+				method: "POST",
+			})
 		} else {
 			$(".result-feedback-buttons").css("display", "none")
 			$(".result-feedback-2").removeClass("d-none")
@@ -61,9 +71,16 @@
 		$(".feedback-2-text").css("display", "none")
 		$(".result-feedback-text").css("display", "block")
 
-		/**
-		 * @todo send to server
-		 */
+		$.ajax({
+			url:
+				window.GLOBAL_ENV.API_BASE_URI +
+				"/feedback/negative?placeId=" +
+				currentPlaceId +
+				"&level=" +
+				level,
+			crossDomain: true,
+			method: "POST",
+		})
 	}
 
 	/**
@@ -126,7 +143,9 @@
 		}
 
 		$(".result-title").text("Place ID: " + data.placeId)
+		currentPlaceId = data.placeId
 
+		window.ctx_api.renderForecast(data.graphPoints)
 		/**
 		 * @todo map and graph (chart.js)
 		 */
@@ -158,6 +177,11 @@
 					showPrediction(data)
 					cache[placeId] = data
 				},
+				error: function(data) {
+					$(".landing-go-btn").html(strings.go_btn_default)
+					$(".landing-go-btn").removeClass("disabled")
+					$(".error-container").html(strings.error)
+				}
 			})
 		}
 	}
