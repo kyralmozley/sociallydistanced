@@ -6,6 +6,9 @@ const python = require("../../helpers/python")
 
 const route = Router()
 
+// This is a temporary cache until we implement Redis
+let cache = new Map()
+
 module.exports = (api) => {
 	api.use("/main", route)
 
@@ -24,18 +27,24 @@ module.exports = (api) => {
 		(req, res, next) => {
 			const { placeId } = req.query
 
+			if (cache.has(placeId)) {
+				return res.json(cache.get(placeId))
+			}
 			/**
 			 * @todo implement caching with Redis
 			 */
 
 			python(placeId)
 				.then((data) => {
-					res.json({
+					const result = {
 						prediction: data.rating,
 						// estimated_capacity: 2, // @TODO
 						placeId, // echo placeId back to client
 						graphPoints: data.day_forecast,
-					})
+					}
+
+					cache.set(placeId, result)
+					res.json(result)
 				})
 				.catch((err) => {
 					next(err)
