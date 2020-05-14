@@ -1,6 +1,7 @@
+"use strict"
+
 /**
  * Responsible for chart stuff
- * @todo finish this -- it's not really done yet.
  */
 ;(function () {
 	// Copied from scss/core/_variables.scss
@@ -21,32 +22,52 @@
 		labels.push(i + ":00")
 	}
 
+	var chart = undefined
 	function renderForecast(points) {
 		var canvas = $(".result-graph")
 
-		// Debugging
-		alert(points.length)
+		/**
+		 * Destroy the current chart, if it exists
+		 */
+		if (chart != undefined) {
+			chart.destroy()
+		}
 
+		var allZero = true
 		var chart_colours = []
 		for (i in points) {
 			var point = points[i]
-			if (point < 15) {
+
+			if (point >= 1) {
+				allZero = false
+			}
+
+			if (point < 10) {
 				chart_colours[i] = colours.green
-			} else if (point < 35) {
+			} else if (point < 20) {
+				chart_colours[i] = colours.lime_green
+			} else if (point < 30) {
 				chart_colours[i] = colours.lime
-			} else if (point < 55) {
+			} else if (point < 40) {
+				chart_colours[i] = colours.yellow_lime
+			} else if (point < 50) {
 				chart_colours[i] = colours.yellow
-			} else if (point < 75) {
+			} else if (point < 60) {
+				chart_colours[i] = colours.orange_yellow
+			} else if (point < 70) {
 				chart_colours[i] = colours.orange
+			} else if (point < 80) {
+				chart_colours[i] = colours.red_orange
 			} else {
 				chart_colours[i] = colours.red
 			}
 		}
 
-		console.log("Chart colours", chart_colours)
-		console.log("Points", points)
+		if (allZero) {
+			return false
+		}
 
-		var myChart = new Chart(canvas, {
+		chart = new Chart(canvas[0], {
 			type: "bar",
 			data: {
 				labels,
@@ -87,6 +108,8 @@
 				},
 			},
 		})
+
+		return true
 	}
 
 	window.ctx_api = {

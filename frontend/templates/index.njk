@@ -10,40 +10,55 @@
 	<div class="error-container"></div>
 </div>
 
-<div class="container landing d-none text-center">
-	<label for="basic-url">Place ID</label>
+<div class="container landing d-none text-center mt-3">
+	<h3 class="display-3 mb-3">Socially Distanced</h3>
+
 	<div class="input-group mb-3">
-		<input value="ChIJpzm3HB4bdkgR5BytQRbMiCc" type="text" class="form-control landing-place-input" id="basic-url" aria-describedby="basic-addon3">
+		<input placeholder="Search for a Place" type="text" class="form-control landing-place-input" id="basic-url" aria-describedby="basic-addon3">
 	</div>
 
-	<a href="#" class="btn btn-primary landing-go-btn">Go</a>
-
-	<hr/>
+	<p>
+		<a href="#" class="btn btn-primary landing-go-btn">Go</a>
+	</p>
 
 	<div class="text-left">
-		<p class="lead">Example place IDs:</p>
+		<p class="lead">Examples:</p>
 		<ul>
-			<li><b>Hyde Park:</b> ChIJhRoYKUkFdkgRDL20SU9sr9E</li>
-			<li><b>Regent's Park:</b> ChIJc8TTcd8adkgRcx43bnFBKPU</li>
-			<li><b>Caledonian Park:</b> ChIJ0W1MGhIbdkgRT_FuhKAdeng</li>
-			<li><b>Euston Station:</b> ChIJnZPcNCQbdkgRBQvh0P46MnM</li>
-			<li><b>Premier Inn St Pancras:</b> ChIJFXsRGTsbdkgRiNfOPIM08pE</li>
-			<li><b>Sainsbury's Camden Road:</b> ChIJpzm3HB4bdkgR5BytQRbMiCc</li>
-			<li><b>Morrisons Chalk Farm:</b> ChIJxf19SeQadkgR_SGbcBrHVuk</li>
+			<li><a href="#" class="debug-link" data-id="ChIJhRoYKUkFdkgRDL20SU9sr9E">Hyde Park, London, UK</a></li>
+			<li><a href="#" class="debug-link" data-id="ChIJc8TTcd8adkgRcx43bnFBKPU">Regent's Park, London, UK</a></li>
+			<li><a href="#" class="debug-link" data-id="ChIJ0W1MGhIbdkgRT_FuhKAdeng">Caledonian Park, Market Road, London, UK</a></li>
+			<li><a href="#" class="debug-link" data-id="ChIJnZPcNCQbdkgRBQvh0P46MnM">Euston Station, Euston, London, UK</a></li>
+			<li><a href="#" class="debug-link" data-id="ChIJFXsRGTsbdkgRiNfOPIM08pE">Premier Inn London St Pancras hotel, Euston Road, London, UK</a></li>
+			<li><a href="#" class="debug-link" data-id="ChIJpzm3HB4bdkgR5BytQRbMiCc">Sainsbury's Camden Road, London, UK</a></li>
+			<li><a href="#" class="debug-link" data-id="ChIJxf19SeQadkgR_SGbcBrHVuk">Morrisons Chalk Farm Road, London, UK</a></li>
+			<li><a href="#" class="debug-link" data-id="ChIJT__GzjB32EcRIAY_W2T_57I">Sainsbury's Edington Avenue, Cambridge, UK</a></li>
 		</ul>
 	</div>
+
+	<footer class="text-center text-secondary credits">
+		<hr/>
+		<p class="small">
+			Created by <a href="//mozley.tech" target="blank" rel="author">Kyra Mozley</a> and
+			<a href="//emozley.uk" target="blank" rel="author">Elliott Mozley</a>.
+		</p>
+		<p class="small">
+			Socially Distanced is <a href="//github.com/kyralmozley/sociallydistanced" target="blank"
+				rel="external">open source on GitHub</a>.
+		</p>
+	</footer>
 </div>
 
 <div class="container result mt-2 d-none">
-	<a href="#" class="back-link">&lsaquo; Back</a>
+	<a href="/" class="back-link">&lsaquo; Back</a>
 
-	<h1 class="result-title text-center">Place title</h1>
+	<h1 class="result-title text-center">Loading</h1>
 	<div class="result-map"></div>
 
-	<p class="result-prediction text-center">Current Prediction: ABC</p>
-	<p class="result-description" id="sd--description">You should be able to safely social distance assuming a 4m^2 space per person.</p>
+	<!-- Current prediction is temporarily hidden. @TODO re-enable -->
+	<p class="result-prediction text-center d-none">Loading</p>
+	<p class="result-description pt-5 pb-5" id="sd--description">Loading</p>
 
-	<div class="result-graph-container">
+	<div class="result-graph-container mb-5">
 		<canvas class="result-graph" width="100%" height="20%"></canvas>
 	</div>
 
@@ -64,11 +79,33 @@
 		<button type="button" class="btn feedback-button-red feedback-button" data-level="4">5</button>
 		<p class="result-feedback-thanks d-none">Thanks for your feedback!</p>
 	</div>
+
+		<footer class="text-center text-secondary credits">
+		<hr/>
+		<p class="small">
+			Created by <a href="//mozley.tech" target="blank" rel="author">Kyra Mozley</a> and
+			<a href="//emozley.uk" target="blank" rel="author">Elliott Mozley</a>.
+		</p>
+		<p class="small">
+			Socially Distanced is <a href="//github.com/kyralmozley/sociallydistanced" target="blank"
+				rel="external">open source on GitHub</a>.
+		</p>
+	</footer>
 </div>
 {% endblock %}
 
 {% block script %}
+<!--
+	chart.js depends on ResizeObserver, which is not on new-new browsers.
+	This polyfill is here to solve that issue. Remove when no-longer needed.
+-->
+<script src="https://cdn.jsdelivr.net/npm/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js" crossorigin="anonymous"></script>
 <script src="https://www.chartjs.org/dist/master/Chart.min.js" crossorigin="anonymous"></script>
 <script src="/static/js/ctx.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ MAPS_API_KEY | default('undefined') }}&libraries=places"></script>
 <script src="/static/js/app.js"></script>
+<script src="/static/js/maps.js"></script>
+
+<script src="/static/js/debug.js"></script>
 {% endblock %}
