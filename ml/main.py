@@ -14,7 +14,6 @@ def reply(placeID):
     prediction.makePrediction(placeID)
     rating = prediction.getCurrentPrediction()
     day_forecast = prediction.getDayForecast()
-    #print(raiting, day_forecast)
 
     response = {
         'rating': rating,
@@ -29,6 +28,6 @@ def reply(placeID):
 
 
 if __name__ == "__main__":
-    reply(sys.argv[1])
-    # reply("ChIJL7CVDxgbdkgRnNimu0Q_Otc")
+    #reply(sys.argv[1])
+    reply("ChIJL7CVDxgbdkgRnNimu0Q_Otc")
 
