@@ -12,17 +12,17 @@ import prediction
 
 def reply(placeID):
     prediction.makePrediction(placeID)
-    raiting = prediction.getCurrentPrediction()
+    rating = prediction.getCurrentPrediction()
     day_forecast = prediction.getDayForecast()
     #print(raiting, day_forecast)
 
     response = {
-        'raiting': raiting,
+        'rating': rating,
         'day_forecast' : day_forecast
     }
 
-    r = requests.post("http://localhost:80", json=response)
-    #print(r)
+    r = json.dumps(response)
+    print(r)
     return r
 
 
