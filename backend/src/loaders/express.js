@@ -3,6 +3,7 @@
 const express = require("express")
 const morgan = require("morgan")
 const bodyParser = require("body-parser")
+const cors = require("cors")
 const config = require("../config")
 const routes = require("../api")
 
@@ -29,6 +30,11 @@ module.exports = async () => {
 	 * Helpful with development; outputs requests
 	 */
 	app.use(morgan("dev"))
+
+	/**
+	 * Initialize the CORS middleware
+	 */
+	app.use(cors())
 
 	/**
 	 * Health check endpoints

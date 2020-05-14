@@ -17,21 +17,20 @@ module.exports = (api) => {
 		"/place",
 		celebrate({
 			query: Joi.object({
-				lat: Joi.number().required(),
-				long: Joi.number().required(),
+				placeId: Joi.string().required(),
 			}),
 		}),
 		(req, res) => {
-			const { lat, long } = req.query
+			const { placeId } = req.query
 			res.json({
-				rating: 0,
-				estimated_capacity: 2,
+				prediction: 0,
+				// estimated_capacity: 2,
+				placeId, // echo placeId back to client
 
-				// return the coordinates back to the client for verification
-				coordinates: {
-					lat,
-					long,
-				},
+				/**
+				 * @todo python stuff
+				 */
+				graphPoints: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 			})
 		}
 	)

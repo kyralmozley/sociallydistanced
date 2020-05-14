@@ -1,0 +1,18 @@
+.result-description {
+	border: 1px solid transparent;
+	border-radius: 3px;
+	color: white;
+}
+
+.result-description-lime,
+.result-description-yellow,
+.result-description-orange {
+	color: black !important;
+}
+
+@each $name, $colour in $sd-all-colours {
+	.result-description-#{$name} {
+		border-color: lighten($colour, 2);
+		background-color: lighten($colour, 2);
+	}
+}
