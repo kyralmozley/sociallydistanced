@@ -1,14 +1,19 @@
+"use strict"
+
 /**
  * Responsible for chart stuff
- * @todo finish this -- it's not really done yet.
  */
 ;(function () {
 	// Copied from scss/core/_variables.scss
 	var colours = {
 		red: "#e14a4e",
+		red_orange: "#eb482b",
 		orange: "#ee8632",
+		orange_yellow: "#ffb624",
 		yellow: "#f7c117",
+		yellow_lime: "#E5F64D",
 		lime: "#9cbd38",
+		lime_green: "#6BBC38",
 		green: "#4fb373",
 	}
 
@@ -17,60 +22,52 @@
 		labels.push(i + ":00")
 	}
 
+	var chart = undefined
 	function renderForecast(points) {
 		var canvas = $(".result-graph")
 
+		/**
+		 * Destroy the current chart, if it exists
+		 */
+		if (chart != undefined) {
+			chart.destroy()
+		}
+
+		var allZero = true
 		var chart_colours = []
 		for (i in points) {
-			points[i]++
-			switch (points[i]) {
-				case 1: {
-					chart_colours[i] = colours.green
-					break
-				}
+			var point = points[i]
 
-				case 2: {
-					chart_colours[i] = colours.lime
-					break
-				}
+			if (point >= 1) {
+				allZero = false
+			}
 
-				case 3: {
-					chart_colours[i] = colours.yellow
-					break
-				}
-				case 4: {
-					chart_colours[i] = colours.yellow
-					break
-				}
-				case 5: {
-					chart_colours[i] = colours.yellow
-					break
-				}
-
-				case 6: {
-					chart_colours[i] = colours.orange
-					break
-				}
-				case 7: {
-					chart_colours[i] = colours.orange
-					break
-				}
-
-				case 8: {
-					chart_colours[i] = colours.red
-					break
-				}
-				case 9: {
-					chart_colours[i] = colours.red
-					break
-				}
+			if (point < 10) {
+				chart_colours[i] = colours.green
+			} else if (point < 20) {
+				chart_colours[i] = colours.lime_green
+			} else if (point < 30) {
+				chart_colours[i] = colours.lime
+			} else if (point < 40) {
+				chart_colours[i] = colours.yellow_lime
+			} else if (point < 50) {
+				chart_colours[i] = colours.yellow
+			} else if (point < 60) {
+				chart_colours[i] = colours.orange_yellow
+			} else if (point < 70) {
+				chart_colours[i] = colours.orange
+			} else if (point < 80) {
+				chart_colours[i] = colours.red_orange
+			} else {
+				chart_colours[i] = colours.red
 			}
 		}
 
-		console.log("Chart colours", chart_colours)
-		console.log("Points", points)
+		if (allZero) {
+			return false
+		}
 
-		var myChart = new Chart(canvas, {
+		chart = new Chart(canvas[0], {
 			type: "bar",
 			data: {
 				labels,
@@ -89,7 +86,7 @@
 				scales: {
 					y: {
 						min: 0,
-						max: 9,
+						max: 100,
 						stepSize: 1,
 						display: false,
 					},
@@ -99,7 +96,7 @@
 						},
 						ticks: {
 							callback: function (value) {
-								return (value * 100).toFixed(0) + "%" // convert it to percentage
+								return value * 100 + "%" // convert it to percentage
 							},
 						},
 					},
@@ -111,6 +108,8 @@
 				},
 			},
 		})
+
+		return true
 	}
 
 	window.ctx_api = {
