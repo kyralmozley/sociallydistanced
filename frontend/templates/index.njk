@@ -26,6 +26,7 @@
 			<li><b>Caledonian Park:</b> ChIJ0W1MGhIbdkgRT_FuhKAdeng</li>
 			<li><b>Euston Station:</b> ChIJnZPcNCQbdkgRBQvh0P46MnM</li>
 			<li><b>Premier Inn St Pancras:</b> ChIJFXsRGTsbdkgRiNfOPIM08pE</li>
+			<li><b>Sainsbury's Camden Road:</b> ChIJpzm3HB4bdkgR5BytQRbMiCc</li>
 		</ul>
 	</div>
 </div>
@@ -39,7 +40,7 @@
 	<p class="result-prediction text-center">Current Prediction: ABC</p>
 	<p class="result-description" id="sd--description">You should be able to safely social distance assuming a 4m^2 space per person.</p>
 
-	<div class="result-graph"><p>Graph</p></div>
+	<canvas class="result-graph" width="400" height="200"></canvas>
 
 	<div class="result-feedback text-center">
 		<p class="text-secondary result-feedback-text">Does this seem right?</p>
@@ -62,5 +63,7 @@
 {% endblock %}
 
 {% block script %}
+<script src="https://www.chartjs.org/dist/master/Chart.min.js" crossorigin="anonymous"></script>
+<script src="/static/js/ctx.js"></script>
 <script src="/static/js/app.js"></script>
 {% endblock %}

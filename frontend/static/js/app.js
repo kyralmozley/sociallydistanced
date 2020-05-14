@@ -13,11 +13,11 @@
 	 */
 	var strings = {
 		prediction_prefix: "Current prediction: ",
-		prediction_0: "1",
-		prediction_1: "2",
-		prediction_2: "3",
-		prediction_3: "4",
-		prediction_4: "5",
+		prediction_0: "1/5",
+		prediction_1: "2/5",
+		prediction_2: "3/5",
+		prediction_3: "4/5",
+		prediction_4: "5/5",
 
 		description_0: "You can safely social distance at this location",
 		description_1: "You should be able to safely social distance at this location",
@@ -127,6 +127,7 @@
 
 		$(".result-title").text("Place ID: " + data.placeId)
 
+		// window.ctx_api.renderForecast(data.graphPoints)
 		/**
 		 * @todo map and graph (chart.js)
 		 */
