@@ -1,9 +1,66 @@
 {% extends "_page.njk" %}
 
 {% block page %}
-<div class="container">
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac. Duis ut diam quam nulla porttitor massa id neque. Eget arcu dictum varius duis at consectetur. Sapien faucibus et molestie ac feugiat sed lectus. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Aliquet nibh praesent tristique magna sit amet purus gravida. Aliquet eget sit amet tellus. Diam quis enim lobortis scelerisque fermentum dui faucibus. Dignissim enim sit amet venenatis. Pharetra convallis posuere morbi leo urna molestie at elementum. Donec ac odio tempor orci. Arcu cursus vitae congue mauris rhoncus. Turpis in eu mi bibendum neque egestas. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum.</p>
-	</p>
+<noscript>
+	<div class="container">
+		<h1>This site requires JavaScript</h1>
+		<p>Please enable JavaScript in your browser to continue.</p>
+	</div>
+</noscript>
+
+<div class="container landing d-none text-center">
+	<label for="basic-url">Place ID</label>
+	<div class="input-group mb-3">
+		<input type="text" class="form-control landing-place-input" id="basic-url" aria-describedby="basic-addon3">
+	</div>
+
+	<a href="#" class="btn btn-primary landing-go-btn">Go</a>
+
+	<hr/>
+
+	<div class="text-left">
+		<p class="lead">Example place IDs:</p>
+		<ul>
+			<li><b>Hyde Park:</b> ChIJhRoYKUkFdkgRDL20SU9sr9E</li>
+			<li><b>Regent's Park:</b> ChIJc8TTcd8adkgRcx43bnFBKPU</li>
+			<li><b>Caledonian Park:</b> ChIJ0W1MGhIbdkgRT_FuhKAdeng</li>
+			<li><b>Euston Station:</b> ChIJnZPcNCQbdkgRBQvh0P46MnM</li>
+			<li><b>Premier Inn St Pancras:</b> ChIJFXsRGTsbdkgRiNfOPIM08pE</li>
+		</ul>
+	</div>
 </div>
+
+<div class="container result mt-2 d-none">
+	<a href="#" class="back-link">&lsaquo; Back</a>
+
+	<h1 class="result-title text-center">Place title</h1>
+	<div class="result-map"><p>Map</p></div>
+
+	<p class="result-prediction text-center">Current Prediction: ABC</p>
+	<p class="result-description" id="sd--description">You should be able to safely social distance assuming a 4m^2 space per person.</p>
+
+	<div class="result-graph"><p>Graph</p></div>
+
+	<div class="result-feedback text-center">
+		<p class="text-secondary result-feedback-text">Does this seem right?</p>
+		<div class="result-feedback-buttons">
+			<a href="#" class="btn btn-sm btn-outline-secondary result-feedback-positive">Yes</a>
+			<a href="#" class="btn btn-sm btn-outline-secondary result-feedback-negative">No</a>
+		</div>
+	</div>
+
+	<div class="result-feedback-2 text-center d-none">
+		<p class="feedback-2-text">Which level seems right?</p>
+		<button type="button" class="btn feedback-button-green feedback-button" data-level="0">1</button>
+		<button type="button" class="btn feedback-button-lime feedback-button" data-level="1">2</button>
+		<button type="button" class="btn feedback-button-yellow feedback-button" data-level="2">3</button>
+		<button type="button" class="btn feedback-button-orange feedback-button" data-level="3">4</button>
+		<button type="button" class="btn feedback-button-red feedback-button" data-level="4">5</button>
+		<p class="result-feedback-thanks d-none">Thanks for your feedback!</p>
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="/static/js/app.js"></script>
 {% endblock %}

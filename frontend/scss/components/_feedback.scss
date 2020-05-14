@@ -1,0 +1,15 @@
+.feedback-button {
+	&:hover {
+		background-color: transparent;
+		color: black;
+	}
+
+	color: black;
+}
+
+@each $name, $colour in $sd-all-colours {
+	.feedback-button-#{$name} {
+		border-color: lighten($colour, 2);
+		background-color: lighten($colour, 2);
+	}
+}
