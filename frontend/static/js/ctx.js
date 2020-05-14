@@ -6,9 +6,13 @@
 	// Copied from scss/core/_variables.scss
 	var colours = {
 		red: "#e14a4e",
+		red_orange: "#eb482b",
 		orange: "#ee8632",
+		orange_yellow: "#ffb624",
 		yellow: "#f7c117",
+		yellow_lime: "#E5F64D",
 		lime: "#9cbd38",
+		lime_green: "#6BBC38",
 		green: "#4fb373",
 	}
 
@@ -19,6 +23,9 @@
 
 	function renderForecast(points) {
 		var canvas = $(".result-graph")
+
+		// Debugging
+		alert(points.length)
 
 		var chart_colours = []
 		for (i in points) {
