@@ -1,6 +1,7 @@
+"use strict"
+
 /**
  * Limit scope -- helpful to stop interference
- * This code *cannot* use non-ES6 features. This is to support legacy devices.
  */
 ;(function () {
 	/**
@@ -29,16 +30,20 @@
 		go_btn_loading:
 			'<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>' +
 			"&nbsp;Loading...",
+
+		error:
+			'<div class="alert alert-danger mt-3" role="alert">Server Error. Please try again.</div>',
+		no_place: '<div class="alert alert-info mt-3" role="alert">Please select a place.</div>',
 	}
+
+	var currentPlaceId = undefined
+	var currentPlace = undefined
 
 	/**
 	 * Handles feedback
 	 * @param {bool} isPositive If the feedback is 'Yes'
 	 */
 	function onFeedback(isPositive) {
-		/**
-		 * @todo send feedback to the server
-		 */
 		if (isPositive) {
 			// hide the feedback buttons
 			$(".result-feedback-buttons").css("display", "none")
@@ -48,6 +53,12 @@
 			// show the 'Thanks for your feedback!' text
 			$(".result-feedback-thanks").removeClass("d-none")
 			$(".result-feedback-2").removeClass("d-none")
+
+			$.ajax({
+				url: window.GLOBAL_ENV.API_BASE_URI + "/feedback/positive?placeId=" + currentPlaceId,
+				crossDomain: true,
+				method: "POST",
+			})
 		} else {
 			$(".result-feedback-buttons").css("display", "none")
 			$(".result-feedback-2").removeClass("d-none")
@@ -61,9 +72,16 @@
 		$(".feedback-2-text").css("display", "none")
 		$(".result-feedback-text").css("display", "block")
 
-		/**
-		 * @todo send to server
-		 */
+		$.ajax({
+			url:
+				window.GLOBAL_ENV.API_BASE_URI +
+				"/feedback/negative?placeId=" +
+				currentPlaceId +
+				"&level=" +
+				level,
+			crossDomain: true,
+			method: "POST",
+		})
 	}
 
 	/**
@@ -93,6 +111,8 @@
 	 * }
 	 */
 	function showPrediction(data) {
+		$(".error-container").empty()
+
 		switch (data.prediction) {
 			case 0: {
 				$(".result-prediction").text(strings.prediction_prefix + strings.prediction_0)
@@ -125,12 +145,29 @@
 			}
 		}
 
-		$(".result-title").text("Place ID: " + data.placeId)
+		currentPlaceId = data.placeId
+		currentPlace = window.maps.thisPlace
+		$(".result-title").text(currentPlace.name || currentPlace.formatted_address)
 
-		// window.ctx_api.renderForecast(data.graphPoints)
-		/**
-		 * @todo map and graph (chart.js)
-		 */
+		try {
+			if (window.ctx_api.renderForecast(data.graphPoints) == false) {
+				$(".result-graph").css("display", "none")
+			} else {
+				$(".result-graph").css("display", "block")
+			}
+		} catch (err) {
+			alert("Chart error: " + err)
+			console.error(err)
+		}
+
+		$(".result-map").html(
+			'<iframe width="100%" height="40%" frameborder="0" style="border:0" ' +
+				'src="https://www.google.com/maps/embed/v1/place?q=place_id:' +
+				data.placeId +
+				"&key=" +
+				window.GLOBAL_ENV.MAPS_API_KEY +
+				'" allowfullscreen></iframe>'
+		)
 
 		$(".result").css("display", "block")
 		$(".result").removeClass("d-none")
@@ -159,6 +196,12 @@
 					showPrediction(data)
 					cache[placeId] = data
 				},
+				error: function (data) {
+					console.warn("Search request error: " + data)
+					$(".landing-go-btn").html(strings.go_btn_default)
+					$(".landing-go-btn").removeClass("disabled")
+					$(".error-container").html(strings.error)
+				},
 			})
 		}
 	}
@@ -169,8 +212,20 @@
 	function setupEvents() {
 		$(".landing-go-btn").on("click", function (event) {
 			event.preventDefault()
-			var placeId = $(".landing-place-input").val()
-			search(placeId)
+
+			try {
+				window.maps.updateAutocomplete()
+			} catch (err) {
+				console.warn("An error occurred:" + err)
+			}
+
+			var placeId = $(".landing-place-input").data("place_id")
+
+			if (typeof placeId != "string") {
+				$(".error-container").html(strings.no_place)
+			} else {
+				search(placeId)
+			}
 		})
 
 		$(".result-feedback-positive").on("click", function (event) {
@@ -190,6 +245,7 @@
 
 		$(".back-link").on("click", function (event) {
 			event.preventDefault()
+
 			$(".result").css("display", "none")
 			$(".landing").css("display", "block")
 		})
@@ -209,7 +265,6 @@
 	$(function () {
 		setupEvents()
 		showLandingPage()
-		console.log("Loaded!")
 	})
 
 	/**
@@ -217,5 +272,6 @@
 	 */
 	window.sd_api = {
 		showPrediction,
+		search,
 	}
 })()

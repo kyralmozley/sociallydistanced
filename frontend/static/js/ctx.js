@@ -1,82 +1,115 @@
+"use strict"
+
 /**
  * Responsible for chart stuff
- * @todo finish this -- it's not really done yet.
  */
 ;(function () {
+	// Copied from scss/core/_variables.scss
+	var colours = {
+		red: "#e14a4e",
+		red_orange: "#eb482b",
+		orange: "#ee8632",
+		orange_yellow: "#ffb624",
+		yellow: "#f7c117",
+		yellow_lime: "#E5F64D",
+		lime: "#9cbd38",
+		lime_green: "#6BBC38",
+		green: "#4fb373",
+	}
+
 	var labels = []
 	for (var i = 0; i < 24; i++) {
 		labels.push(i + ":00")
 	}
 
+	var chart = undefined
 	function renderForecast(points) {
 		var canvas = $(".result-graph")
 
-		/*
-		var myChart = new Chart(canvas, {
-			type: "line",
-			data: {
-				datasets: [
-					{
-						label: "Prediction",
-						data: points,
-						borderWidth: 1,
-					},
-				],
-			},
-		})
-		*/
+		/**
+		 * Destroy the current chart, if it exists
+		 */
+		if (chart != undefined) {
+			chart.destroy()
+		}
 
-		var myChart = new Chart(canvas, {
+		var allZero = true
+		var chart_colours = []
+		for (i in points) {
+			var point = points[i]
+
+			if (point >= 1) {
+				allZero = false
+			}
+
+			if (point < 10) {
+				chart_colours[i] = colours.green
+			} else if (point < 20) {
+				chart_colours[i] = colours.lime_green
+			} else if (point < 30) {
+				chart_colours[i] = colours.lime
+			} else if (point < 40) {
+				chart_colours[i] = colours.yellow_lime
+			} else if (point < 50) {
+				chart_colours[i] = colours.yellow
+			} else if (point < 60) {
+				chart_colours[i] = colours.orange_yellow
+			} else if (point < 70) {
+				chart_colours[i] = colours.orange
+			} else if (point < 80) {
+				chart_colours[i] = colours.red_orange
+			} else {
+				chart_colours[i] = colours.red
+			}
+		}
+
+		if (allZero) {
+			return false
+		}
+
+		chart = new Chart(canvas[0], {
 			type: "bar",
 			data: {
 				labels,
 				datasets: [
 					{
 						label: "Prediction",
+						backgroundColor: chart_colours,
 						data: points,
-						barPercentage: 1,
-						backgroundColor: [
-							"rgba(255, 99, 132, 1)",
-							"rgba(54, 162, 235, 1)",
-							"rgba(255, 206, 86, 1)",
-							"rgba(75, 192, 192, 1)",
-							"rgba(153, 102, 255, 01)",
-							"rgba(255, 159, 64, 1)",
-						],
-						borderColor: [
-							"rgba(255, 99, 132, 1)",
-							"rgba(54, 162, 235, 1)",
-							"rgba(255, 206, 86, 1)",
-							"rgba(75, 192, 192, 1)",
-							"rgba(153, 102, 255, 1)",
-							"rgba(255, 159, 64, 1)",
-						],
-						borderWidth: 1,
 					},
 				],
 			},
 			options: {
-				scaleOverride: true,
-				scaleSteps: 10,
-				scaleStepWidth: 50,
-				scaleStartValue: 0,
-
-				responsive: true,
-				maintainAspectRatio: true,
 				legend: {
 					display: false,
 				},
 				scales: {
-					yAxes: [
-						{
-							ticks: {
-								max: 5,
+					y: {
+						min: 0,
+						max: 100,
+						stepSize: 1,
+						display: false,
+					},
+					yAxes: {
+						gridLines: {
+							display: false,
+						},
+						ticks: {
+							callback: function (value) {
+								return value * 100 + "%" // convert it to percentage
 							},
 						},
-					],
+					},
+					xAxes: {
+						gridLines: {
+							display: false,
+						},
+					},
 				},
 			},
 		})
+
+		return true
 	}
 
 	window.ctx_api = {

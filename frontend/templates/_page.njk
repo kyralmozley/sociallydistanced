@@ -13,6 +13,7 @@
 			window.GLOBAL_ENV = {
 				ENVIRONMENT: "{{ ENV | default('development') }}",
 				API_BASE_URI: "{{ BASE_URI | default('http://localhost:3000') }}",
+				MAPS_API_KEY: "{{ MAPS_API_KEY | default('undefined') }}",
 			}
 		</script>
   </head>

@@ -32,11 +32,4 @@ def reply(placeID):
 
 
 if __name__ == "__main__":
-    #reply(sys.argv[1])
-
-    #reply("ChIJL7CVDxgbdkgRnNimu0Q_Otc")
-    #reply('ChIJ94YBg6obdkgR8kG7ia5Eu0g') # tesco metro kings x
-    #reply('ChIJH5p8i1AbdkgRD01IW5aTTS4') # wework
-    reply('ChIJxf19SeQadkgR_SGbcBrHVuk') #morrisons
-    #reply('ChIJT__GzjB32EcRIAY_W2T_57I')
-    #reply('ChIJ94YBg6obdkgR8kG7ia5Eu0g')
+    reply(sys.argv[1])
