@@ -15,19 +15,12 @@ module.exports = (placeId) => {
 		const py = spawn("python", [pyMain, placeId])
 
 		py.stdout.on("data", (json) => {
-			console.log("JSON", json, "PARSED", json.toString())
 			const object = JSON.parse(json)
-			console.log(object)
 			resolve(object)
 		})
 
 		py.stderr.on("data", (err) => {
-			console.log("ERROR", err.toString())
 			reject(err)
-		})
-
-		py.stderr.on("close", (code) => {
-			console.log(`Process quit with code: ${code}`)
 		})
 	})
 }
