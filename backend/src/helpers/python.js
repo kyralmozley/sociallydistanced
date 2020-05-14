@@ -1,4 +1,3 @@
-const fs = require("fs")
 const path = require("path")
 const { spawn } = require("child_process")
 
@@ -11,7 +10,16 @@ const pyMain = path.join(__dirname, "..", "..", "..", "ml", "main.py")
  */
 module.exports = (placeId) => {
 	return new Promise((resolve, reject) => {
-		const py = spawn("python", [pyMain, placeId])
+		/**
+		 * This is a really annoying hack, and is mainly a hotfix since the EC2
+		 * instance requires we specify python3
+		 */
+		let py
+		if (process.env.NODE_ENV == "development") {
+			py = spawn("python", [pyMain, placeId])
+		} else {
+			py = spawn("python3", [pyMain, placeId])
+		}
 
 		py.stdout.on("data", (json) => {
 			const object = JSON.parse(json)
