@@ -29,6 +29,8 @@
 		go_btn_loading:
 			'<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>' +
 			"&nbsp;Loading...",
+
+		error: '<div class="alert alert-danger mt-3" role="alert">Server Error. Please try again.</div>'
 	}
 
 	/**
@@ -158,6 +160,11 @@
 					showPrediction(data)
 					cache[placeId] = data
 				},
+				error: function(data) {
+					$(".landing-go-btn").html(strings.go_btn_default)
+					$(".landing-go-btn").removeClass("disabled")
+					$(".error-container").html(strings.error)
+				}
 			})
 		}
 	}

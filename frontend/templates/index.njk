@@ -1,12 +1,14 @@
 {% extends "_page.njk" %}
 
 {% block page %}
-<noscript>
-	<div class="container">
+<div class="container">
+	<noscript>
 		<h1>This site requires JavaScript</h1>
 		<p>Please enable JavaScript in your browser to continue.</p>
-	</div>
-</noscript>
+	</noscript>
+
+	<div class="error-container"></div>
+</div>
 
 <div class="container landing d-none text-center">
 	<label for="basic-url">Place ID</label>
