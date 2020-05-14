@@ -22,48 +22,17 @@
 
 		var chart_colours = []
 		for (i in points) {
-			points[i]++
-			switch (points[i]) {
-				case 1: {
-					chart_colours[i] = colours.green
-					break
-				}
-
-				case 2: {
-					chart_colours[i] = colours.lime
-					break
-				}
-
-				case 3: {
-					chart_colours[i] = colours.yellow
-					break
-				}
-				case 4: {
-					chart_colours[i] = colours.yellow
-					break
-				}
-				case 5: {
-					chart_colours[i] = colours.yellow
-					break
-				}
-
-				case 6: {
-					chart_colours[i] = colours.orange
-					break
-				}
-				case 7: {
-					chart_colours[i] = colours.orange
-					break
-				}
-
-				case 8: {
-					chart_colours[i] = colours.red
-					break
-				}
-				case 9: {
-					chart_colours[i] = colours.red
-					break
-				}
+			var point = points[i]
+			if (point < 15) {
+				chart_colours[i] = colours.green
+			} else if (point < 35) {
+				chart_colours[i] = colours.lime
+			} else if (point < 55) {
+				chart_colours[i] = colours.yellow
+			} else if (point < 75) {
+				chart_colours[i] = colours.orange
+			} else {
+				chart_colours[i] = colours.red
 			}
 		}
 
@@ -89,7 +58,7 @@
 				scales: {
 					y: {
 						min: 0,
-						max: 9,
+						max: 100,
 						stepSize: 1,
 						display: false,
 					},
