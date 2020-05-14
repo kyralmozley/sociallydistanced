@@ -58,13 +58,14 @@ lat = 0.0
 long = 0.0
 type_place = []
 opening_times = []
-
+open_now = True
 
 def googleData(placeID):
     global lat
     global long
     global type_place
     global name
+    global open_now
 
     api_key = APIKey.getGoogleAPIKey()
     url = 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' + placeID + '&fields=formatted_address,name,type,opening_hours,geometry&key=' + api_key
@@ -81,6 +82,7 @@ def googleData(placeID):
     if 'opening_hours' in get_data:
         # open hours will reduce forecast to 0 outside open hours
         openhours = convertOpenHours(get_data['opening_hours']['weekday_text'])
+        open_now = get_data['opening_hours']['open_now']
     else:
         # open hours will not affect the output forecast since we do not know them
         openhours = ['0', '23']
@@ -177,3 +179,6 @@ def getPlaceName():
 
 def getTypePlace():
     return type_place
+
+def getIsOpen():
+    return open_now

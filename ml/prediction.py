@@ -75,3 +75,6 @@ def getDayForecast():
 
 def getPlaceName():
     return getData.getPlaceName()
+
+def getIsOpen():
+    return getData.getIsOpen()
