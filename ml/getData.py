@@ -174,15 +174,14 @@ def getTweets(place):
         startDate = datetime.datetime.now() - datetime.timedelta(hours = 24)
         endDate = datetime.datetime.now()
 
+        # get first tweet at location/name to get ID
         tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=1)
-        if not tweet:
-            return 0
 
         tweet_id = str(tweet[-1]).split(',')
         id = int(tweet_id[2].split(":")[1])
 
         loop = 1
-        while loop < 10:
+        while loop < 3:
             tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=100, max_id=id-1)
             if not tweet:
                 break

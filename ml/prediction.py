@@ -48,7 +48,9 @@ def makePrediction(placeID):
     name= name.split("-")[0]
     trend_weight = getData.getTrends(name)
     tweet_weight = getData.getTweets(name)
-    tweet_weight = math.log(tweet_weight +1, 100)
+    print(tweet_weight)
+    tweet_weight = math.log(tweet_weight +1, 30)
+    print(tweet_weight)
     if tweet_weight < 0.1:
         tweet_weight = 0.1
 
@@ -80,16 +82,16 @@ def makePrediction(placeID):
 
     shift = datetime.date.today().weekday()
 
-    currentPrediction = 2 * google_ranking[1] * temps[shift] * forecast[shift] * chance_rain[shift] * weather_weighting * trend_weight * tweet_weight
+    currentPrediction = google_ranking[1] * temps[shift] * forecast[shift] * chance_rain[shift] * weather_weighting * trend_weight * tweet_weight
     day_forecast = combine
 
 
 def getCurrentPrediction():
-    if currentPrediction > 40:
+    if currentPrediction > 50:
         return 4
-    elif currentPrediction > 30:
+    elif currentPrediction > 40:
         return 3
-    elif currentPrediction > 15:
+    elif currentPrediction > 25:
         return 2
     elif currentPrediction > 5:
         return 1
