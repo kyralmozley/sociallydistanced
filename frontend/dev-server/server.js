@@ -20,6 +20,7 @@ const port = process.env.PORT || 8080
 
 const base = path.join(__dirname, "..")
 const assets = path.join(base, "static")
+const root = path.join(base, "root")
 
 /**
  * Morgan logger
@@ -57,6 +58,7 @@ app.use("/static/css/main.css", (req, res) => {
  * This means you can do /html, /img, etc.
  */
 app.use("/static", express.static(assets))
+app.use(express.static(root))
 
 /**
  * Routes
