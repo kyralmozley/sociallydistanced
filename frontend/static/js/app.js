@@ -10,6 +10,11 @@
 	var cache = {}
 
 	/**
+	 * Logs when we've sent feedback for a place
+	 */
+	var feedbacks = []
+
+	/**
 	 * Object containing string templates
 	 */
 	var strings = {
@@ -45,6 +50,13 @@
 	 * @param {bool} isPositive If the feedback is 'Yes'
 	 */
 	function onFeedback(isPositive) {
+		/**
+		 * Prevent the same client from sending feedback to the same place multiple
+		 * times. This is enforced on the server, but it's nice to have on the
+		 * client too.
+		 */
+		if (feedbacks.includes(currentPlaceId)) return false
+
 		if (isPositive) {
 			// hide the feedback buttons
 			$(".result-feedback-buttons").css("display", "none")
@@ -60,6 +72,8 @@
 				crossDomain: true,
 				method: "POST",
 			})
+
+			feedbacks.push(currentPlaceId)
 		} else {
 			$(".result-feedback-buttons").css("display", "none")
 			$(".result-feedback-2").removeClass("d-none")
@@ -83,6 +97,15 @@
 			crossDomain: true,
 			method: "POST",
 		})
+
+		feedbacks.push(currentPlaceId)
+	}
+
+	function resetFeedbackButtons() {
+		$(".result-feedback-text").css("display", "block")
+		$(".result-feedback-buttons").css("display", "block")
+		$(".result-feedback-2").css("display", "none")
+		$(".result-feedback-thanks").css("display", "none")
 	}
 
 	/**
@@ -112,6 +135,9 @@
 	 */
 	function showPrediction(data) {
 		$(".error-container").empty()
+
+		// Reset feedback buttons, necessary as this is a SPA.
+		resetFeedbackButtons()
 
 		if (data.open) {
 			switch (data.prediction) {

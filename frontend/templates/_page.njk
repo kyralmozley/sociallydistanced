@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +16,58 @@
 				MAPS_API_KEY: "{{ MAPS_API_KEY | default('undefined') }}",
 			}
 		</script>
+
+		{% block seo %}
+			<!-- General -->
+			<meta name="description" content="An AI to predict whether or not social distancing is currently feasible at a given location." />
+			<meta name="keywords" content="distance, location, coronavirus, covid, corona, covid-19, covid19, social, distance, distancing, safe, two meters, 2m, 2 meters, supermarket, busy, park, AI, ML, Elliott Mozley, Kyra Mozley, UK, US, Corona US, Corona UK" />
+			<meta name="locale" content="en_GB" />
+			<meta name="theme-color" content="578308" />
+
+			<!-- Twitter and OpenGraph -->
+			<meta name="twitter:description" content="An AI to predict whether or not social distancing is currently feasible at a given location." />
+			<meta name="og:title" content="Socially Distanced" />
+			<meta name="og:description" content="An AI to predict whether or not social distancing is currently feasible at a given location." />
+
+			<!-- Desktop Browsers -->
+			<link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico" />
+
+			<!-- PWA -->
+			<link rel="manifest" href="/static/manifest.json" />
+			<link rel="webmanifest" href="/static/manifest.json" />
+
+			<!-- Chrome versions that support PWA, but not manifests -->
+			<meta name="mobile-web-app-capable" content="yes" />
+			<link rel="icon" sizes="192x192" href="/static/img/launcher-icons/192.png" />
+
+			<!-- iOS -->
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+			<meta name="apple-mobile-web-app-title" content="Socially Distanced" />
+
+			<link href="/static/img/apple-touch-icons/180.png" sizes="180x180" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/152.png" sizes="152x152" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/120.png" sizes="120x120" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/114.png" sizes="114x114" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/76.png" sizes="76x76" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/72.png" sizes="72x72" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/60.png" sizes="60x60" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/57.png" sizes="57x57" rel="apple-touch-icon-precomposed" />
+			<link href="/static/img/apple-touch-icons/precomposed.png" rel="apple-touch-icon-precomposed" />
+
+			<!-- Windows 8 -->
+			<meta name="msapplication-config" content="/static/browserconfig.xml" />
+
+			<!-- Windows -->
+			<meta name="application-name" content="Socially Distanced" />
+			<meta name="msapplication-tooltip" content="www.sociallydistanced.space" />
+			<meta name="msapplication-window" content="width=1024;height=728;" />
+			<meta name="msapplication-navbutton-color" content="#578308" />
+			<meta name="msapplication-starturl" content="/" />
+
+
+		{% endblock %}
+
+		{% block head %}{% endblock %}
   </head>
   <body class="sd-body">
 	<div class="sd-canvas">

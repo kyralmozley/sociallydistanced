@@ -1,17 +1,22 @@
 "use strict"
 
+/**
+ * Copy/paste of 'static.js', but it puts stuff in the project root rather than
+ * in 'static'.
+ */
+
 const fs = require("fs")
 const path = require("path")
 const { walk } = require("../util")
 const { conf } = require("./configuration")
 
-const writeWalk = require("../vendor/writeFileRecursive")
-
 const cleanCSS = require("clean-css")
 const uglifyJS = require("uglify-es")
 
-const staticInput = conf.STATIC_ROOT
-const staticOutput = path.join(conf.OUTPUT_ROOT, "static")
+const writeWalk = require("../vendor/writeFileRecursive")
+
+const staticInput = path.join(conf.ROOT, "root")
+const staticOutput = conf.OUTPUT_ROOT
 
 function css(file, name) {
 	const input = fs.readFileSync(file, "utf8")

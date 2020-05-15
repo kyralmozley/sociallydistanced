@@ -7,7 +7,6 @@ const python = require("../../helpers/python")
 const route = Router()
 
 /**
- * @todo send feedback to python for training data
  * @todo ratelimiting (block mutliple requests from same IP for same place id)
  */
 module.exports = (api) => {

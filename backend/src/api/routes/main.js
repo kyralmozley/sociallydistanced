@@ -38,7 +38,6 @@ module.exports = (api) => {
 				.then((data) => {
 					const result = {
 						prediction: data.rating,
-						// estimated_capacity: 2, // @TODO
 						placeId, // echo placeId back to client
 						graphPoints: data.day_forecast,
 						open: data.open,

@@ -7,6 +7,7 @@ const { conf } = require("./lib/configuration")
 
 const templates = require("./lib/templates")
 const content = require("./lib/static")
+const root = require("./lib/root")
 const style = require("./lib/style")
 
 async function build() {
@@ -23,6 +24,7 @@ async function build() {
 	// run compilers
 	templates()
 	await content()
+	await root()
 	style()
 }
 

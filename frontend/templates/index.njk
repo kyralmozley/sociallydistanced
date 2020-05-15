@@ -35,17 +35,7 @@
 		</ul>
 	</div>
 
-	<footer class="text-center text-secondary credits">
-		<hr/>
-		<p class="small">
-			Created by <a href="//mozley.tech" target="blank" rel="author">Kyra Mozley</a> and
-			<a href="//emozley.uk" target="blank" rel="author">Elliott Mozley</a>.
-		</p>
-		<p class="small">
-			Socially Distanced is <a href="//github.com/kyralmozley/sociallydistanced" target="blank"
-				rel="external">open source on GitHub</a>.
-		</p>
-	</footer>
+	{% include "_footer.njk" %}
 </div>
 
 <div class="container result mt-2 d-none">
@@ -59,7 +49,7 @@
 	<p class="result-description" id="sd--description">Loading</p>
 
 	<div class="result-graph-container">
-		<canvas class="result-graph"></canvas>
+		<canvas class="result-graph" width="100%" height="20%"></canvas>
 	</div>
 
 	<div class="result-feedback text-center">
@@ -70,6 +60,9 @@
 		</div>
 	</div>
 
+<!--
+	@TODO Fix bug with feedback buttons not resetting on back
+-->
 	<div class="result-feedback-2 text-center d-none">
 		<p class="feedback-2-text">Which level seems right?</p>
 		<button type="button" class="btn feedback-button-green feedback-button" data-level="0">1</button>
@@ -80,17 +73,7 @@
 		<p class="result-feedback-thanks d-none">Thanks for your feedback!</p>
 	</div>
 
-		<footer class="text-center text-secondary credits">
-		<hr/>
-		<p class="small">
-			Created by <a href="//mozley.tech" target="blank" rel="author">Kyra Mozley</a> and
-			<a href="//emozley.uk" target="blank" rel="author">Elliott Mozley</a>.
-		</p>
-		<p class="small">
-			Socially Distanced is <a href="//github.com/kyralmozley/sociallydistanced" target="blank"
-				rel="external">open source on GitHub</a>.
-		</p>
-	</footer>
+	{% include "_footer.njk" %}
 </div>
 {% endblock %}
 
@@ -108,4 +91,6 @@
 <script src="/static/js/maps.js"></script>
 
 <script src="/static/js/debug.js"></script>
+
+<script src="/static/js/loadsw.js"></script>
 {% endblock %}

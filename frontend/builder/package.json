@@ -1,28 +1,28 @@
 {
-  "name": "sociallydistanced-frontend-builder",
-  "version": "0.0.0",
-  "description": "",
-  "main": "build.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kyralmozley/sociallydistanced.git"
-  },
-  "author": "Elliott Mozley",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/kyralmozley/sociallydistanced/issues"
-  },
-  "homepage": "https://github.com/kyralmozley/sociallydistanced#readme",
-  "dependencies": {
-    "clean-css": "^4.2.3",
-    "dotenv": "^8.2.0",
-    "html-minifier": "^4.0.0",
-    "nunjucks": "^3.2.1",
-    "rimraf": "^3.0.2",
-    "sass": "^1.26.5",
-    "uglify-es": "^3.3.9"
-  }
+	"name": "sociallydistanced-frontend-builder",
+	"version": "0.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kyralmozley/sociallydistanced.git"
+	},
+	"author": "Elliott Mozley",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/kyralmozley/sociallydistanced/issues"
+	},
+	"homepage": "https://github.com/kyralmozley/sociallydistanced#readme",
+	"dependencies": {
+		"clean-css": "^4.2.3",
+		"dotenv": "^8.2.0",
+		"html-minifier": "^4.0.0",
+		"nunjucks": "^3.2.1",
+		"rimraf": "^3.0.2",
+		"sass": "^1.26.5",
+		"uglify-es": "^3.3.9"
+	}
 }

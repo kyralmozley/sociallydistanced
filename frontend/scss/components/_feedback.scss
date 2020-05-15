@@ -5,6 +5,12 @@
 	}
 
 	color: black;
+
+	margin: auto 5pt;
+}
+
+.result-feedback-buttons a {
+	margin: auto 5pt;
 }
 
 @each $name, $colour in $sd-all-colours {
