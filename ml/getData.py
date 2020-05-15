@@ -163,42 +163,45 @@ def getTrends(name):
 
 
 def getTweets(place):
-    auth = tweepy.OAuthHandler(APIKey.getTwitterAPIKey(), APIKey.getTwitterSecretKey())
-    auth.set_access_token(APIKey.getTwitterAccessToken(), APIKey.getTwitterAccessTokenSecret())
-    api = tweepy.API(auth, wait_on_rate_limit=False, wait_on_rate_limit_notify=True)
+    try:
+        auth = tweepy.OAuthHandler(APIKey.getTwitterAPIKey(), APIKey.getTwitterSecretKey())
+        auth.set_access_token(APIKey.getTwitterAccessToken(), APIKey.getTwitterAccessTokenSecret())
+        api = tweepy.API(auth, wait_on_rate_limit=False, wait_on_rate_limit_notify=True)
 
-    placeID = api.reverse_geocode(lat, long, 1000)
-    tweets = []
+        placeID = api.reverse_geocode(lat, long, 1000)
+        tweets = []
 
-    startDate = datetime.datetime.now() - datetime.timedelta(hours = 24)
-    endDate = datetime.datetime.now()
+        startDate = datetime.datetime.now() - datetime.timedelta(hours = 24)
+        endDate = datetime.datetime.now()
 
-    tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=1)
-    if not tweet:
-        return 0
-
-    tweet_id = str(tweet[-1]).split(',')
-    id = int(tweet_id[2].split(":")[1])
-
-    loop = 1
-    while loop < 10:
-        tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=100, max_id=id-1)
+        tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=1)
         if not tweet:
-            break
+            return 0
 
         tweet_id = str(tweet[-1]).split(',')
-
-        for t in tweet:
-            if endDate > t.created_at > startDate:
-                tweets.append(t)
-            else:
-                break
-
         id = int(tweet_id[2].split(":")[1])
 
-        loop += 1
+        loop = 1
+        while loop < 10:
+            tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=100, max_id=id-1)
+            if not tweet:
+                break
 
-    return len(tweets)
+            tweet_id = str(tweet[-1]).split(',')
+
+            for t in tweet:
+                if endDate > t.created_at > startDate:
+                    tweets.append(t)
+                else:
+                    break
+
+            id = int(tweet_id[2].split(":")[1])
+
+            loop += 1
+
+        return len(tweets)
+    except:
+        return 1
 
 
 def convertOpenHours(data):

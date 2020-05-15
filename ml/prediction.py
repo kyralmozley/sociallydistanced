@@ -52,7 +52,7 @@ def makePrediction(placeID):
     if tweet_weight < 0.1:
         tweet_weight = 0.1
 
-    if 'supermarket' in place or 'store' in place:
+    if 'supermarket' in place or 'store' in place or 'grocery_or_supermarket' in place or 'liquor_store' in place:
         weather_weighting = 1.5
         tweet_weight = 1
     if 'park' in place:
@@ -79,7 +79,8 @@ def makePrediction(placeID):
             combine[x] = 0
 
     shift = datetime.date.today().weekday()
-    currentPrediction = google_ranking[1] * temps[shift] * forecast[shift] * chance_rain[shift] * weather_weighting * trend_weight
+
+    currentPrediction = 2 * google_ranking[1] * temps[shift] * forecast[shift] * chance_rain[shift] * weather_weighting * trend_weight * tweet_weight
     day_forecast = combine
 
 
@@ -88,7 +89,7 @@ def getCurrentPrediction():
         return 4
     elif currentPrediction > 30:
         return 3
-    elif currentPrediction > 20:
+    elif currentPrediction > 15:
         return 2
     elif currentPrediction > 5:
         return 1
@@ -97,7 +98,11 @@ def getCurrentPrediction():
 
 
 def getDayForecast():
-    return [int(i) for i in day_forecast]
+    for i in range(len(day_forecast)):
+        if day_forecast[i] > 99:
+            day_forecast[i] = 99
+        day_forecast[i] = int(day_forecast[i])
+    return day_forecast
 
 def getPlaceName():
     return getData.getPlaceName()
