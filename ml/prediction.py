@@ -4,7 +4,7 @@ import math
 import getData
 
 currentPrediction = 0
-day_forecast = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+day_forecast = [0]*24
 
 
 def makePrediction(placeID):
@@ -27,23 +27,33 @@ def makePrediction(placeID):
     # else it shouldnt add much of an effect
     # weather is working with decimals !
     place = getData.getTypePlace()
-
-    if 'supermarket' in place or 'store' in place:
-        weather_weighting = 1.5
-    if 'park' in place:
-        weather_weighting = 0.8
-
     name = getData.getPlaceName()
     name= name.split("-")[0]
     trend_weight = getData.getTrends(name)
+    tweet_weight = getData.getTweets(name)
+    tweet_weight = math.log(tweet_weight +1, 100)
+
+    if 'supermarket' in place or 'store' in place:
+        weather_weighting = 1.5
+        tweet_weight = 1
+    if 'park' in place:
+        weather_weighting = 0.8
+
+
+    print(tweet_weight)
+
     if trend_weight == 0:
         # assume something went wrong in finding the trend, do nothing
         trend_weight = 1
     else:
         trend_weight = math.log(trend_weight+1, 10)
+    if google_ranking[0] != day_forecast: # not a load of zeros
+        combine = [a * b for a, b in zip(combine, google_ranking[0])]
+        combine = [i * weather_weighting * trend_weight * tweet_weight for i in combine]
+    else:
+        combine = [i * weather_weighting * trend_weight * tweet_weight * 50 for i in combine]
 
-    combine = [a * b for a, b in zip(combine, google_ranking[0])]
-    combine = [i * weather_weighting * trend_weight for i in combine]
+
 
 
     for x in range(0, int(openhours[0])):

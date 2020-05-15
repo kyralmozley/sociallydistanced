@@ -6,6 +6,8 @@ import datetime
 from pytrends.request import TrendReq
 import requests
 import pandas as pd
+import tweepy
+
 '''
 Map the weather response code to the probability of going out
 Note: this is currently done purely on my judgement 
@@ -59,6 +61,7 @@ long = 0.0
 type_place = []
 opening_times = []
 open_now = True
+
 
 def googleData(placeID):
     global lat
@@ -139,21 +142,61 @@ def getWeather(lat, lon):
 
     return [temps, forecast, chanceRain]
 
+
 def getTrends(name):
     try:
         pytrends = TrendReq(hl='en-US', tz=360)
         kw_list = [name]
         pytrends.build_payload(kw_list, cat=0, timeframe='today 3-m', geo='GB-ENG', gprop='')
-        day_value = pytrends.interest_over_time().iloc[-1,0] # yesterdays score (sadly doesnt give todays)
+        day_value = pytrends.interest_over_time().iloc[-1, 0]  # yesterdays score (sadly doesnt give todays)
 
         pytrends.build_payload(kw_list, cat=0, timeframe='now 7-d', geo='GB-ENG', gprop='')
         day_trends = pytrends.interest_over_time().tail(24).mean()
 
-        mean = int(2*(day_value*day_trends)/(day_value+day_trends))
-        print(mean)
+        mean = int(2 * (day_value * day_trends) / (day_value + day_trends))
         return mean
     except:
         return 0
+
+
+def getTweets(place):
+    auth = tweepy.OAuthHandler(APIKey.getTwitterAPIKey(), APIKey.getTwitterSecretKey())
+    auth.set_access_token(APIKey.getTwitterAccessToken(), APIKey.getTwitterAccessTokenSecret())
+    api = tweepy.API(auth, wait_on_rate_limit=False, wait_on_rate_limit_notify=True)
+
+    placeID = api.reverse_geocode(lat, long, 1000)
+    tweets = []
+
+    startDate = datetime.datetime.now() - datetime.timedelta(hours = 24)
+    endDate = datetime.datetime.now()
+
+    tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=1)
+    if not tweet:
+        return 0
+
+    tweet_id = str(tweet[-1]).split(',')
+    id = int(tweet_id[2].split(":")[1])
+
+    loop = 1
+    while loop < 10:
+        tweet = api.search(q=place + '-filter:retweets', geo=placeID, count=100, max_id=id-1)
+        if not tweet:
+            break
+
+        tweet_id = str(tweet[-1]).split(',')
+
+        for t in tweet:
+            if endDate > t.created_at > startDate:
+                tweets.append(t)
+            else:
+                break
+
+        id = int(tweet_id[2].split(":")[1])
+
+        loop += 1
+
+    return len(tweets)
+
 
 def convertOpenHours(data):
     try:
@@ -177,8 +220,10 @@ def convertOpenHours(data):
 def getPlaceName():
     return name
 
+
 def getTypePlace():
     return type_place
+
 
 def getIsOpen():
     return open_now
