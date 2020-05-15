@@ -2,6 +2,7 @@
 
 const { Router } = require("express")
 const { celebrate, Joi } = require("celebrate")
+const python = require("../../helpers/python")
 
 const route = Router()
 
@@ -25,9 +26,13 @@ module.exports = (api) => {
 		(req, res, next) => {
 			const { placeId } = req.query
 
-			// @todo python
-
-			res.status(202).send("Accepted")
+			python("feedback.py", ["true", placeId])
+				.then(() => {
+					res.status(202).send("Accepted")
+				})
+				.catch((err) => {
+					next(err)
+				})
 		}
 	)
 
@@ -39,15 +44,19 @@ module.exports = (api) => {
 		celebrate({
 			query: Joi.object({
 				placeId: Joi.string().required(),
-				suggestion: Joi.number().integer().required()
+				level: Joi.number().integer().required(),
 			}),
 		}),
 		(req, res, next) => {
 			const { placeId, suggestion } = req.query
 
-			// @todo python
-
-			res.status(202).send("Accepted")
+			python("feedback.py", [suggestion.toString(), placeId])
+				.then(() => {
+					res.status(202).send("Accepted")
+				})
+				.catch((err) => {
+					next(err)
+				})
 		}
 	)
 }

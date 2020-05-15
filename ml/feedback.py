@@ -20,12 +20,12 @@ Accepts a json
     feedback: feedback,#true, or number raiting
     placeid : placeid
 }
-    
+
 '''
 def feedback(data):
-    d = json.loads(data)
-    feedback = d['feedback']
-    placeID = d['placeid']
+    feedback = data[0]
+    placeID = data[1]
+    print(feedback, placeID)
     prediction.makePrediction(placeID)
     name = prediction.getPlaceName()
     rating = prediction.getCurrentPrediction()
@@ -48,8 +48,3 @@ def feedback(data):
 
 if __name__ == "__main__":
     feedback(sys.argv[1])
-
-
-
-
-
