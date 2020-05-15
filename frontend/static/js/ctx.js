@@ -12,7 +12,7 @@
 		orange_yellow: "#ffb624",
 		yellow: "#f7c117",
 		yellow_lime: "#E5F64D",
-		lime: "#9cbd38",
+		lime: "#8eac34",
 		lime_green: "#6BBC38",
 		green: "#4fb373",
 	}

@@ -22,7 +22,7 @@
 
 		description_0: "You can safely social distance at this location",
 		description_1: "You should be able to safely social distance at this location",
-		description_2: "You can probably safely social distance at this location",
+		description_2: "You may be able to safely social distance at this location",
 		description_3: "It is unlikely that you will be able to safely social distance",
 		description_4: "You cannot safely social distance at this location",
 

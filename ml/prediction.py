@@ -5,11 +5,25 @@ import getData
 
 currentPrediction = 0
 day_forecast = [0]*24
-
+google_ranking = 0
+weather_ranking = 0
+temps = []
+forecast = []
+chance_rain = []
+trend_rate = 0
+tweet_rate = 0
 
 def makePrediction(placeID):
     global currentPrediction
     global day_forecast
+
+    global google_ranking
+    global weather_ranking
+    global temps
+    global forecast
+    global chance_rain
+    global trend_rate
+    global tweet_rate
 
     weather_weighting = 1.2
 
@@ -32,15 +46,14 @@ def makePrediction(placeID):
     trend_weight = getData.getTrends(name)
     tweet_weight = getData.getTweets(name)
     tweet_weight = math.log(tweet_weight +1, 100)
+    if tweet_weight < 0.1:
+        tweet_weight = 0.1
 
     if 'supermarket' in place or 'store' in place:
         weather_weighting = 1.5
         tweet_weight = 1
     if 'park' in place:
         weather_weighting = 0.8
-
-
-    print(tweet_weight)
 
     if trend_weight == 0:
         # assume something went wrong in finding the trend, do nothing
@@ -88,3 +101,18 @@ def getPlaceName():
 
 def getIsOpen():
     return getData.getIsOpen()
+
+def getGoogleRanking():
+    return google_ranking
+def getWeatherRanking():
+    return weather_ranking
+def getTemps():
+    return temps
+def getForecast():
+    return forecast
+def getChanceRain():
+    return chance_rain
+def getTrendRate():
+    return trend_rate
+def getTweetRate():
+    return tweet_rate
