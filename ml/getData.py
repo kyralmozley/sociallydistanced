@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import pprint
 import json
 import populartimes
@@ -10,9 +13,9 @@ import tweepy
 
 '''
 Map the weather response code to the probability of going out
-Note: this is currently done purely on my judgement 
+Note: this is currently done purely on my judgement
 1 = I'm going out to have a BBQ and beer right now
-0.1 = not going outside staying in bed 
+0.1 = not going outside staying in bed
 (0.1 rather than 0 for smoothing reasons)
 '''
 weather_dictionary = {
