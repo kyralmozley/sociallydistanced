@@ -15,9 +15,6 @@ const conf = {
 	SCSS_ROOT: path.join(ROOT, "scss"),
 	STATIC_ROOT: path.join(ROOT, "static"),
 
-	/**
-	 * @todo make sure we mkdir this
-	 */
 	OUTPUT_ROOT: path.join(ROOT, "dist"),
 
 	TEMPLATES_EXT: "njk",
