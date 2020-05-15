@@ -37,7 +37,7 @@ module.exports = (api) => {
 	)
 
 	/**
-	 * Handles positive feedback
+	 * Handles negative feedback
 	 */
 	route.post(
 		"/negative",
@@ -48,13 +48,15 @@ module.exports = (api) => {
 			}),
 		}),
 		(req, res, next) => {
-			const { placeId, suggestion } = req.query
+			const { placeId, level } = req.query
+			console.log(placeId, level)
 
-			python("feedback.py", [suggestion.toString(), placeId])
+			python("feedback.py", [level.toString(), placeId])
 				.then(() => {
 					res.status(202).send("Accepted")
 				})
 				.catch((err) => {
+					console.log(err)
 					next(err)
 				})
 		}
