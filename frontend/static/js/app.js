@@ -20,6 +20,7 @@
 		prediction_3: "4/5",
 		prediction_4: "5/5",
 
+		description_closed: "This location seems to be closed.",
 		description_0: "You can safely social distance at this location",
 		description_1: "You should be able to safely social distance at this location",
 		description_2: "You may be able to safely social distance at this location",
@@ -94,7 +95,6 @@
 		// The ID selector *sucks*, but we don't really have a better option here
 		$("#sd--description").removeClass()
 		$("#sd--description").addClass("result-description")
-		$("#sd--description").addClass("sd-ta-center")
 		$("#sd--description").addClass("result-description-" + colour)
 		$("#sd--description").text(description)
 	}
@@ -113,36 +113,45 @@
 	function showPrediction(data) {
 		$(".error-container").empty()
 
-		switch (data.prediction) {
-			case 0: {
-				$(".result-prediction").text(strings.prediction_prefix + strings.prediction_0)
-				_setPredictionDescription(strings.description_0, "green")
-				break
-			}
+		if (data.open) {
+			switch (data.prediction) {
+				case 0: {
+					$(".result-prediction").text(strings.prediction_prefix + strings.prediction_0)
+					_setPredictionDescription(strings.description_0, "green")
+					break
+				}
 
-			case 1: {
-				$(".result-prediction").text(strings.prediction_prefix + strings.prediction_1)
-				_setPredictionDescription(strings.description_1, "lime")
-				break
-			}
+				case 1: {
+					$(".result-prediction").text(strings.prediction_prefix + strings.prediction_1)
+					_setPredictionDescription(strings.description_1, "lime")
+					break
+				}
 
-			case 2: {
-				$(".result-prediction").text(strings.prediction_prefix + strings.prediction_2)
-				_setPredictionDescription(strings.description_2, "yellow")
-				break
-			}
+				case 2: {
+					$(".result-prediction").text(strings.prediction_prefix + strings.prediction_2)
+					_setPredictionDescription(strings.description_2, "yellow")
+					break
+				}
 
-			case 3: {
-				$(".result-prediction").text(strings.prediction_prefix + strings.prediction_3)
-				_setPredictionDescription(strings.description_3, "orange")
-				break
-			}
+				case 3: {
+					$(".result-prediction").text(strings.prediction_prefix + strings.prediction_3)
+					_setPredictionDescription(strings.description_3, "orange")
+					break
+				}
 
-			case 4: {
-				$(".result-prediction").text(strings.prediction_prefix + strings.prediction_4)
-				_setPredictionDescription(strings.description_4, "red")
-				break
+				case 4: {
+					$(".result-prediction").text(strings.prediction_prefix + strings.prediction_4)
+					_setPredictionDescription(strings.description_4, "red")
+					break
+				}
 			}
+		} else {
+			$(".result-prediction").text(strings.prediction_prefix)
+			$("#sd--description").removeClass()
+			$("#sd--description").addClass("result-description")
+			$("#sd--description").addClass("bg-dark")
+			$("#sd--description").addClass("text-white")
+			$("#sd--description").text(strings.description_closed)
 		}
 
 		currentPlaceId = data.placeId

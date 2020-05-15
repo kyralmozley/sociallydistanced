@@ -1,34 +1,33 @@
 const path = require("path")
-const { spawn } = require("child_process")
+const { PythonShell } = require("python-shell")
 
-const pyMain = path.join(__dirname, "..", "..", "..", "ml", "main.py")
+const pyRoot = path.join(__dirname, "..", "..", "..", "ml")
 
 /**
  * Runs the main.py script
  * @param {string} placeId The Google Maps API place ID
  * @returns Promise<resolve: Object data, reject: error>
  */
-module.exports = (placeId) => {
+module.exports = (script, args) => {
 	return new Promise((resolve, reject) => {
-		/**
-		 * This is a really annoying hack, and is mainly a hotfix since the EC2
-		 * instance requires we specify python3
-		 */
-		let py
-		if (process.env.NODE_ENV == "development") {
-			py = spawn("python", [pyMain, placeId])
-		} else {
-			py = spawn("python3", [pyMain, placeId])
-		}
+		PythonShell.run(
+			script,
+			{
+				mode: "text",
+				args,
+				scriptPath: pyRoot,
+			},
+			(err, results) => {
+				if (err) {
+					console.error(err)
+					return reject(err)
+				}
 
-		py.stdout.on("data", (json) => {
-			const object = JSON.parse(json)
-			resolve(object)
-		})
+				console.log(results)
+				const json = JSON.parse(results)
 
-		py.stderr.on("data", (err) => {
-			console.log(`Python Error: ${err}`)
-			reject(err)
-		})
+				resolve(json)
+			}
+		)
 	})
 }

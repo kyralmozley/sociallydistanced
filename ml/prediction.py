@@ -53,7 +53,7 @@ def makePrediction(placeID):
         tweet_weight = 0.1
 
     if 'supermarket' in place or 'store' in place or 'grocery_or_supermarket' in place or 'liquor_store' in place:
-        weather_weighting = 1.5
+        weather_weighting = 1.3
         tweet_weight = 1
     if 'park' in place:
         weather_weighting = 0.8

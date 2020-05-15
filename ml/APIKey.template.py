@@ -11,3 +11,15 @@ def getGoogleAPIKey():
 def getWeatherKey():
     # api from weatherbit.io
     return "API_KEY_HERE"
+
+def getTwitterAPIKey():
+    return "API_KEY_HERE"
+
+def getTwitterSecretKey():
+    return "API_KEY_HERE"
+
+def getTwitterAccessToken():
+    return "API_KEY_HERE"
+
+def getTwitterAccessTokenSecret():
+    return "API_KEY_HERE"
