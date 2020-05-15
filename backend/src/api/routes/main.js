@@ -34,13 +34,14 @@ module.exports = (api) => {
 			 * @todo implement caching with Redis
 			 */
 
-			python(placeId)
+			python("main.py", [placeId])
 				.then((data) => {
 					const result = {
 						prediction: data.rating,
 						// estimated_capacity: 2, // @TODO
 						placeId, // echo placeId back to client
 						graphPoints: data.day_forecast,
+						open: data.open,
 					}
 
 					cache.set(placeId, result)
