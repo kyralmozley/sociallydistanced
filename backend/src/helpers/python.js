@@ -1,3 +1,5 @@
+"use strict"
+
 const path = require("path")
 const { PythonShell } = require("python-shell")
 
@@ -23,7 +25,9 @@ module.exports = (script, args) => {
 					return reject(err)
 				}
 
-				console.log(results)
+				if (process.env.NODE_ENV == "development") {
+					console.log(results)
+				}
 				const json = JSON.parse(results)
 
 				resolve(json)

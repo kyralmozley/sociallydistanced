@@ -22,10 +22,7 @@ Accepts a json
 }
 
 '''
-def feedback(data):
-    feedback = data[0]
-    placeID = data[1]
-    print(feedback, placeID)
+def feedback(feedback, placeID):
     prediction.makePrediction(placeID)
     name = prediction.getPlaceName()
     rating = prediction.getCurrentPrediction()
@@ -47,4 +44,4 @@ def feedback(data):
     return
 
 if __name__ == "__main__":
-    feedback(sys.argv[1])
+    feedback(sys.argv[1], sys.argv[2])

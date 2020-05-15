@@ -16,7 +16,7 @@
 		}
 
 		// Get the first place (ID 0)
-		const place = places[0]
+		var place = places[0]
 		//input.val(typeof place.name == "string" ? place.name : place.formatted_address)
 		input.data("place_id", place.place_id)
 

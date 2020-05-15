@@ -1,3 +1,5 @@
+"use strict"
+
 ;(function () {
 	$(".debug-link").on("click", function (event) {
 		event.preventDefault()
