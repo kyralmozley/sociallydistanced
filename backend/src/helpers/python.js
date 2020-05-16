@@ -25,9 +25,22 @@ module.exports = (script, args) => {
 					return reject(err)
 				}
 
-				if (process.env.NODE_ENV == "development") {
-					console.log(results)
-				}
+				/**
+				 * @todo error to fix:
+
+0|sociallydistanced  | SyntaxError: Unexpected token , in JSON at position 3
+0|sociallydistanced  |     at JSON.parse (<anonymous>)
+0|sociallydistanced  |     at /apps/sociallydistanced/backend/src/helpers/python.js:31:23
+0|sociallydistanced  |     at PythonShell._endCallback (/apps/sociallydistanced/backend/node_modules/python-shell/index.js:218:20)
+0|sociallydistanced  |     at terminateIfNeeded (/apps/sociallydistanced/backend/node_modules/python-shell/index.js:160:39)
+0|sociallydistanced  |     at ChildProcess.<anonymous> (/apps/sociallydistanced/backend/node_modules/python-shell/index.js:133:13)
+0|sociallydistanced  |     at ChildProcess.emit (events.js:310:20)
+0|sociallydistanced  |     at Process.ChildProcess._handle.onexit (internal/child_process.js:275:12)
+
+				 */
+				//if (process.env.NODE_ENV == "development") {
+				console.log(results)
+				//}
 				const json = JSON.parse(results)
 
 				resolve(json)
