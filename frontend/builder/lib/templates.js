@@ -22,6 +22,7 @@ module.exports = () => {
 				ENV: conf.BROWSER_ENV,
 				BASE_URI: conf.API_BASE_URI,
 				MAPS_API_KEY: conf.MAPS_API_KEY,
+				CDN_ROOT: conf.CDN_ROOT,
 			})
 
 			console.log(`Generated file \`${file}\` successfully`)

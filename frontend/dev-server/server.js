@@ -41,6 +41,7 @@ nunjucks(app, {
 		ENV: process.env.ENV,
 		BASE_URI: process.env.BASE_URI,
 		MAPS_API_KEY: process.env.MAPS_API_KEY,
+		CDN_ROOT: process.env.CDN_ROOT,
 	},
 })
 

@@ -82,13 +82,13 @@
 -->
 <script src="https://cdn.jsdelivr.net/npm/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js" crossorigin="anonymous"></script>
 <script src="https://www.chartjs.org/dist/master/Chart.min.js" crossorigin="anonymous"></script>
-<script src="/static/js/ctx.js"></script>
+<script src="{{ CDN_ROOT }}/static/js/ctx.js"></script>
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ MAPS_API_KEY | default('undefined') }}&libraries=places"></script>
-<script src="/static/js/app.js"></script>
-<script src="/static/js/maps.js"></script>
+<script src="{{ CDN_ROOT }}/static/js/app.js"></script>
+<script src="{{ CDN_ROOT }}/static/js/maps.js"></script>
 
-<script src="/static/js/debug.js"></script>
+<script src="{{ CDN_ROOT }}/static/js/debug.js"></script>
 
-<script src="/static/js/loadsw.js"></script>
+<script src="{{ CDN_ROOT }}/static/js/loadsw.js"></script>
 {% endblock %}
