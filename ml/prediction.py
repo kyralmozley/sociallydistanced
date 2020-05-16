@@ -10,6 +10,7 @@ currentPrediction = 0
 day_forecast = [0]*24
 google_ranking = 0
 weather_ranking = 0
+place = []
 temps = []
 forecast = []
 chance_rain = []
@@ -19,7 +20,7 @@ tweet_rate = 0
 def makePrediction(placeID):
     global currentPrediction
     global day_forecast
-
+    global place
     global google_ranking
     global weather_ranking
     global temps
@@ -48,9 +49,7 @@ def makePrediction(placeID):
     name= name.split("-")[0]
     trend_weight = getData.getTrends(name)
     tweet_weight = getData.getTweets(name)
-    print(tweet_weight)
     tweet_weight = math.log(tweet_weight +1, 30)
-    print(tweet_weight)
     if tweet_weight < 0.1:
         tweet_weight = 0.1
 
@@ -98,6 +97,21 @@ def getCurrentPrediction():
     else:
         return 0
 
+def getQ():
+    if  not getData.getIsOpen():
+        return -1
+    if 'supermarket' in place or 'store' in place or 'grocery_or_supermarket' in place or 'liquor_store' in place:
+        if currentPrediction < 5:
+            return 0
+        elif currentPrediction < 10:
+            return 1
+        elif currentPrediction < 20:
+            return 2
+        elif currentPrediction < 30:
+            return 3
+        else:
+            return 4
+    return -1
 
 def getDayForecast():
     for i in range(len(day_forecast)):

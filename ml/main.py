@@ -21,37 +21,19 @@ def reply(placeID):
     rating = prediction.getCurrentPrediction()
     day_forecast = prediction.getDayForecast()
     open = prediction.getIsOpen()
+    queue = prediction.getQ()
     response = {
         'name' : name,
         'open' : open,
         'rating': rating,
         'day_forecast': day_forecast,
+        'queue' : queue
     }
 
     r = json.dumps(response)
     print(r)
     return r
 
-def feedback(feedback, placeID):
-    prediction.makePrediction(placeID)
-    name = prediction.getPlaceName()
-    rating = prediction.getCurrentPrediction()
-    day_forecast = prediction.getDayForecast()
-    open = prediction.getIsOpen()
-
-    googleRanking = prediction.getGoogleRanking()
-    weather = prediction.getWeatherRanking()
-    temp = prediction.getTemps()
-    forecast = prediction.getForecast()
-    rain = prediction.getChanceRain()
-    trend_rate = prediction.getTrendRate()
-    tweet_rate = prediction.getTweetRate()
-    response = [placeID, name, rating, day_forecast, open, googleRanking,
-                weather, temp, forecast, rain, trend_rate, tweet_rate, feedback
-                ]
-
-    writer.writerow(response)
-    return
 
 
 
