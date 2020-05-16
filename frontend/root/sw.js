@@ -12,7 +12,7 @@ console.log("WORKER: executing.")
 		A version number is useful when updating the worker logic,
 		allowing you to remove outdated cache entries during the update.
 	*/
-var version = "v0.0.3"
+var version = "v0.0.4"
 
 /*
 		These resources will be downloaded and cached by the service worker
@@ -78,13 +78,13 @@ self.addEventListener("fetch", function (event) {
 			We should only cache GET requests, and deal with the rest of method in the
 			client-side, by handling failed POST,PUT,PATCH,etc. requests.
 		*/
-	if (event.request.method !== "GET") {
-		/* If we don't block the event as shown below, then the request will go to
+	//if (event.request.method !== "GET") {
+	/* If we don't block the event as shown below, then the request will go to
 			the network as usual.
     */
-		console.log("WORKER: fetch event ignored.", event.request.method, event.request.url)
-		return
-	}
+	console.log("WORKER: fetch event ignored.", event.request.method, event.request.url)
+	return
+	//}
 	/* Similar to event.waitUntil in that it blocks the fetch event on a promise.
 		Fulfillment result will be used as the response, and rejection will end in a
 		HTTP response indicating failure.
