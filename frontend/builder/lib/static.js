@@ -6,12 +6,17 @@ const { walk } = require("../util")
 const { conf } = require("./configuration")
 
 const writeWalk = require("../vendor/writeFileRecursive")
+const copyWalk = require("../vendor/copyFileRecursive")
 
 const cleanCSS = require("clean-css")
 const uglifyJS = require("uglify-es")
 
 const staticInput = conf.STATIC_ROOT
 const staticOutput = path.join(conf.OUTPUT_ROOT, "static")
+
+/**
+ * @todo it seems to be not cloning the raw files correctly
+ */
 
 function css(file, name) {
 	const input = fs.readFileSync(file, "utf8")
@@ -43,7 +48,7 @@ module.exports = async () => {
 
 		// Transform the file
 		const ext = path.extname(f, baseName)
-		let transformed = ""
+		let transformed = false
 		if (ext == ".css") {
 			transformed = css(f, baseName)
 		} else if (ext == ".js") {
@@ -55,15 +60,24 @@ module.exports = async () => {
 			console.log(`Skipping file \`${f}\``)
 			continue
 		} else {
-			transformed = fs.readFileSync(f, "utf8")
+			copyWalk(f, path.join(staticOutput, memberName), (err) => {
+				if (err) {
+					console.error(`Could not copy \`${f}\`: \`${err}\``)
+				} else {
+					console.log(`Successfully copied file \`${f}\``)
+				}
+			})
 		}
 
-		writeWalk(path.join(staticOutput, memberName), transformed, (err) => {
-			if (err) {
-				console.error(`Could not save \`${f}\`: \`${err}\``)
-			} else {
-				console.log(`Successfully saved file \`${f}\``)
-			}
-		})
+		// Raw files are just copied
+		if (transformed !== false) {
+			writeWalk(path.join(staticOutput, memberName), transformed, (err) => {
+				if (err) {
+					console.error(`Could not save \`${f}\`: \`${err}\``)
+				} else {
+					console.log(`Successfully saved file \`${f}\``)
+				}
+			})
+		}
 	}
 }
