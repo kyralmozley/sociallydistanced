@@ -14,10 +14,6 @@ const uglifyJS = require("uglify-es")
 const staticInput = conf.STATIC_ROOT
 const staticOutput = path.join(conf.OUTPUT_ROOT, "static")
 
-/**
- * @todo it seems to be not cloning the raw files correctly
- */
-
 function css(file, name) {
 	const input = fs.readFileSync(file, "utf8")
 	const comment = `/* ${name} */ /* File generated: ${new Date().toISOString()} */\n`
