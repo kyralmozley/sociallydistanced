@@ -25,11 +25,10 @@ module.exports = (script, args) => {
 					return reject(err)
 				}
 
-				//if (process.env.NODE_ENV == "development") {
-				console.log(results[2])
-				//}
+				if (process.env.NODE_ENV == "development") {
+					console.log(results[2])
+				}
 				const json = JSON.parse(results[2])
-				console.log(json)
 
 				resolve(json)
 			}
