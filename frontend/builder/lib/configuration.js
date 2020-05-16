@@ -24,6 +24,8 @@ const conf = {
 	API_BASE_URI: process.env.BASE_URI || "http://localhost:3000/api",
 	MAPS_API_KEY: process.env.MAPS_API_KEY,
 
+	CDN_ROOT: process.env.ENV == "production" ? process.env.PRODUCTION_CDN_ROOT : LOCAL_CDN_ROOT,
+
 	HTML_MINIFY_OPTIONS: {
 		collapseWhitespace: true,
 		collapseInlineTagWhitespace: true,
