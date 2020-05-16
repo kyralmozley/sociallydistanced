@@ -66,6 +66,8 @@
 			// show the 'Thanks for your feedback!' text
 			$(".result-feedback-thanks").removeClass("d-none")
 			$(".result-feedback-2").removeClass("d-none")
+			$(".result-feedback-thanks").css("display", "block")
+			$(".result-feedback-2").css("display", "block")
 
 			$.ajax({
 				url: window.GLOBAL_ENV.API_BASE_URI + "/feedback/positive?placeId=" + currentPlaceId,
@@ -76,16 +78,18 @@
 			feedbacks.push(currentPlaceId)
 		} else {
 			$(".result-feedback-buttons").css("display", "none")
-			$(".result-feedback-2").removeClass("d-none")
 			$(".result-feedback-text").css("display", "none")
+			$(".result-feedback-2").removeClass("d-none")
+			$(".result-feedback-2").css("display", "block")
 		}
 	}
 
 	function onFeedback2(level) {
-		$(".feedback-button").css("display", "none")
 		$(".result-feedback-thanks").removeClass("d-none")
+		$(".feedback-button").css("display", "none")
 		$(".feedback-2-text").css("display", "none")
 		$(".result-feedback-text").css("display", "block")
+		$(".result-feedback-thanks").css("display", "block")
 
 		$.ajax({
 			url:
