@@ -12,7 +12,7 @@ console.log("WORKER: executing.")
 		A version number is useful when updating the worker logic,
 		allowing you to remove outdated cache entries during the update.
 	*/
-var version = "v0.0.4"
+var version = "v0.0.5"
 
 /*
 		These resources will be downloaded and cached by the service worker

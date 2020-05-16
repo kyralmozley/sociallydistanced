@@ -15,6 +15,18 @@
 		"type": "",
 		"update_via_cache": "none"
 	},
+	"screenshots": [
+		{
+			"src": "/static/img/screenshots/mobile-375x812.png",
+			"sizes": "375x812",
+			"type": "image/png"
+		},
+		{
+			"src": "/static/img/screenshots/tablet-1134x850.png",
+			"sizes": "1134x850",
+			"type": "image/png"
+		}
+	],
 	"icons": [
 		{
 			"src": "/static/img/launcher-icons/36.png",
