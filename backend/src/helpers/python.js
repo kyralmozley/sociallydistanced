@@ -26,7 +26,7 @@ module.exports = (script, args) => {
 				}
 
 				//if (process.env.NODE_ENV == "development") {
-				console.log(results)
+				console.log(results[3])
 				//}
 				const json = JSON.parse(results[3])
 				console.log(json)
