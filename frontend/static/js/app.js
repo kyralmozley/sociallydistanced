@@ -106,10 +106,10 @@
 	}
 
 	function resetFeedbackButtons() {
-		$(".result-feedback-text").css("display", "block")
-		$(".result-feedback-buttons").css("display", "block")
-		$(".result-feedback-2").css("display", "none")
-		$(".result-feedback-thanks").css("display", "none")
+		//$(".result-feedback-text").css("display", "block")
+		//$(".result-feedback-buttons").css("display", "block")
+		//$(".result-feedback-2").css("display", "none")
+		//$(".result-feedback-thanks").css("display", "none")
 	}
 
 	/**
