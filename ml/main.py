@@ -23,11 +23,11 @@ def reply(placeID):
     open = prediction.getIsOpen()
     queue = prediction.getQ()
     response = {
-        'name' : name,
-        'open' : open,
-        'rating': rating,
-        'day_forecast': day_forecast,
-        'queue' : queue
+      'name' : name,
+      'open' : open,
+      'rating': rating,
+      'day_forecast': day_forecast,
+      'queue' : queue
     }
 
     r = json.dumps(response)
@@ -39,4 +39,3 @@ def reply(placeID):
 
 if __name__ == "__main__":
     reply(sys.argv[1])
-

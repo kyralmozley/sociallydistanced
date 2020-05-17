@@ -11,7 +11,9 @@ const pyRoot = path.join(__dirname, "..", "..", "..", "ml")
  * @returns Promise<resolve: Object data, reject: error>
  */
 module.exports = (script, args) => {
+	console.log(1)
 	return new Promise((resolve, reject) => {
+		console.log(2)
 		PythonShell.run(
 			script,
 			{
@@ -20,19 +22,22 @@ module.exports = (script, args) => {
 				scriptPath: pyRoot,
 			},
 			(err, results) => {
+				console.log(3)
 				if (err) {
 					console.error(err)
 					return reject(err)
 				}
 
 				try {
+					console.log(results)
 					if (process.env.NODE_ENV == "development") {
-						console.log(results[2])
+						console.log(results[0])
 					}
-					const json = JSON.parse(results[2])
+					const json = JSON.parse(results[0])
 
 					resolve(json)
 				} catch (err) {
+					console.error(err)
 					reject(err)
 				}
 			}
