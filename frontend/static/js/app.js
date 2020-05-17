@@ -1,6 +1,10 @@
 "use strict"
 
 /**
+ * @todo i need to re-write this from scratch
+ */
+
+/**
  * Limit scope -- helpful to stop interference
  */
 ;(function () {
@@ -25,12 +29,18 @@
 		prediction_3: "4/5",
 		prediction_4: "5/5",
 
-		description_closed: "This location seems to be closed.",
+		description_closed: "This location seems to be closed",
 		description_0: "You can safely social distance at this location",
 		description_1: "You should be able to safely social distance at this location",
 		description_2: "You may be able to safely social distance at this location",
 		description_3: "It is unlikely that you will be able to safely social distance",
 		description_4: "You cannot safely social distance at this location",
+
+		queue_0: "It is unlikely that you will have to queue for entry",
+		queue_1: "You may have to queue for entry",
+		queue_2: "There is likely to be a short queue for entry",
+		queue_3: "You will have to queue for entry",
+		queue_4: "There is likely a long queue for entry",
 
 		go_btn_default: "Go",
 		go_btn_loading:
@@ -127,6 +137,21 @@
 	}
 
 	/**
+	 * Utility function for showPrediction
+	 * @private
+	 * @param {string} description The text to show
+	 * @param {string} colour The colour used in the class name
+	 */
+	function _setQueueDescription(description, colour) {
+		// The ID selector *sucks*, but we don't really have a better option here
+		$("#sd--queue").removeClass()
+		$("#sd--queue").addClass("result-queue")
+		$("#sd--queue").addClass("result-queue-" + colour)
+		$("#sd--queue").text(description)
+		$("#sd--queue").css("display", "block")
+	}
+
+	/**
 	 * Renders the data on the page
 	 * @param {Object} data See implementation notes for format
 	 *
@@ -182,6 +207,38 @@
 			$("#sd--description").addClass("bg-dark")
 			$("#sd--description").addClass("text-white")
 			$("#sd--description").text(strings.description_closed)
+		}
+
+		switch (data.queue) {
+			case -1: {
+				$(".result-queue").css("display", "none")
+				break
+			}
+
+			case 0: {
+				_setQueueDescription(strings.queue_0, "green")
+				break
+			}
+
+			case 1: {
+				_setQueueDescription(strings.queue_1, "lime")
+				break
+			}
+
+			case 2: {
+				_setQueueDescription(strings.queue_2, "yellow")
+				break
+			}
+
+			case 3: {
+				_setQueueDescription(strings.queue_3, "orange")
+				break
+			}
+
+			case 4: {
+				_setQueueDescription(strings.queue_4, "red")
+				break
+			}
 		}
 
 		currentPlaceId = data.placeId

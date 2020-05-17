@@ -41,6 +41,7 @@ module.exports = (api) => {
 						placeId, // echo placeId back to client
 						graphPoints: data.day_forecast,
 						open: data.open,
+						queue: data.queue || -1,
 					}
 
 					cache.set(placeId, result)

@@ -5,6 +5,7 @@
 	text-align: center;
 	padding: 10pt;
 	margin: 40pt auto;
+	margin-bottom: 0;
 }
 
 .result-description-lime,
@@ -17,5 +18,28 @@
 	.result-description-#{$name} {
 		border-color: lighten($colour, 2);
 		background-color: lighten($colour, 2);
+	}
+}
+
+// Qing
+.result-queue {
+	border: 1px solid transparent;
+	border-radius: 3px;
+	color: black;
+	text-align: center;
+	padding: 10pt;
+	margin: 5pt;
+}
+
+.result-queue-lime,
+.result-queue-yellow,
+.result-queue-orange {
+	color: black !important;
+}
+
+@each $name, $colour in $sd-all-colours {
+	.result-queue-#{$name} {
+		//border-color: lighten($colour, 2);
+		//background-color: lighten($colour, 2);
 	}
 }
