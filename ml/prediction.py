@@ -36,14 +36,13 @@ def makePrediction(placeID):
         global trend_rate
         global tweet_rate
 
-        openhours = getData.googleData(placeID)
+        [openhours, place] = getData.googleData(placeID)
 
         google_ranking = getData.getPopularTimes(placeID)  # returns [forecast, current]
         [feels_like, temps, cloud, forecast, chance_rain] = getData.getWeather()
 
         hour = datetime.datetime.now().hour
 
-        type_place = getData.getTypePlace()
         name = getData.getPlaceName()
         name= name.split("-")[0]
         [week_trend, day_trend] = getData.getTrends(name)
@@ -83,12 +82,12 @@ def makePrediction(placeID):
         encoded_types = [0]* len(complete_types)
 
         for i in range(len(complete_types)):
-            if complete_types[i] in type_place:
+            if complete_types[i] in place:
                 encoded_types[i] = 1
 
         # only write if we have legit data
         if google_ranking[1] != -1 and google_ranking[0] != [0]*24:
-            writer.writerow([placeID, getData.getPlaceName(), hour, type_place, google_ranking[0][hour],
+            writer.writerow([placeID, getData.getPlaceName(), hour, place, google_ranking[0][hour],
                          feels_like[hour], temps[hour], cloud[hour], forecast[hour], chance_rain[hour], week_trend, day_trend, tweets, google_ranking[1]])
 
         # deal with case google returned all 0s (i.e. no forecast)
@@ -121,7 +120,7 @@ def makePrediction(placeID):
             for i in range(closed, opened):
                 day_forecast[i] = 0
 
-        if 'park' in type_place:
+        if 'park' in place:
             # reduce the weighting slighly for parks
             day_forecast = [x * 0.7 for x in day_forecast]
 
@@ -156,9 +155,9 @@ def getQ():
             return 0
         elif currentPrediction < 5:
             return 1
-        elif currentPrediction < 10:
+        elif currentPrediction < 15:
             return 2
-        elif currentPrediction < 20:
+        elif currentPrediction < 30:
             return 3
         else:
             return 4

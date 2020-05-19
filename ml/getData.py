@@ -32,7 +32,6 @@ def googleData(placeID):
     api_key = APIKey.getGoogleAPIKey()
     url = 'https://maps.googleapis.com/maps/api/place/details/json?place_id=' + placeID + '&fields=formatted_address,name,type,opening_hours,geometry&key=' + api_key
     get_data = requests.get(url).json()['result']
-
     # Get googles name for the place
     if 'name' in get_data:
         name = get_data['name']
@@ -56,7 +55,7 @@ def googleData(placeID):
     lat = latlong['lat']
     long = latlong['lng']
 
-    return openhours
+    return [openhours, type_place]
 
 
 def getPopularTimes(placeID):
