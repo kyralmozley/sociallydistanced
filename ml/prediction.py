@@ -110,7 +110,7 @@ def makePrediction(placeID):
 
         opened = int(openhours[0])
         closed = int(openhours[1])
-
+        print(opened, closed)
         if opened < closed:
             # normal shop open 9am close 6pm
             for i in range(0, opened):
