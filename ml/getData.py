@@ -180,7 +180,7 @@ def convertOpenHours(data):
             closed[0] = int(closed[0]) + 12
         if closed == ['12', 'AM']:
             closed = ['0', 'AM']
-        return [open[0], closed[0]]
+        return [int(open[0]), int(closed[0])]
     except:
         return [0, 23]
 
