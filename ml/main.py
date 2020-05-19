@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python -W ignore::DeprecationWarning
 # -*- coding: utf-8 -*-
 
 '''
@@ -10,6 +10,8 @@ import json
 import sys
 
 import prediction
+import warnings
+warnings.filterwarnings("ignore")
 
 def reply(placeID):
 
