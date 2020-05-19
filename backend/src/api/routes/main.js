@@ -27,8 +27,8 @@ module.exports = (api) => {
 		(req, res, next) => {
 			const { placeId } = req.query
 
-			if (cache.has(placeId)) {
-				return res.json(cache.get(placeId))
+			if (cache.has(placeId) && cache.get(placeId).expiry < Date.now()) {
+				return res.json(cache.get(placeId).data)
 			}
 			/**
 			 * @todo implement caching with Redis
@@ -44,7 +44,10 @@ module.exports = (api) => {
 						queue: data.queue || -1,
 					}
 
-					cache.set(placeId, result)
+					cache.set(placeId, {
+						data: result,
+						expiry: Date.now() + 30 * 60 * 1000,
+					})
 					res.json(result)
 				})
 				.catch((err) => {
