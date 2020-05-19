@@ -26,7 +26,7 @@ def reply(placeID):
       'rating': rating,
       'day_forecast': day_forecast,
       'queue' : queue,
-    'openhours' : openhours
+      'openhours' : openhours
     }
 
     r = json.dumps(response)
