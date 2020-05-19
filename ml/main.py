@@ -11,9 +11,6 @@ import sys
 
 import prediction
 
-file = open('feedback.csv', 'a')
-writer = csv.writer(file)
-
 def reply(placeID):
 
     prediction.makePrediction(placeID)

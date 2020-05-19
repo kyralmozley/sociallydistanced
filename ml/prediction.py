@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import csv
 import datetime
 import math
-
+import pickle
+import pprint
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
 import getData
 
 currentPrediction = 0
@@ -17,82 +20,130 @@ chance_rain = []
 trend_rate = 0
 tweet_rate = 0
 
+file = open('responses.csv', 'a')
+writer = csv.writer(file)
+
 def makePrediction(placeID):
-    global currentPrediction
-    global day_forecast
-    global place
-    global google_ranking
-    global weather_ranking
-    global temps
-    global forecast
-    global chance_rain
-    global trend_rate
-    global tweet_rate
+    try:
+        global currentPrediction
+        global day_forecast
+        global place
+        global google_ranking
+        global weather_ranking
+        global temps
+        global forecast
+        global chance_rain
+        global trend_rate
+        global tweet_rate
 
-    weather_weighting = 1.2
+        openhours = getData.googleData(placeID)
 
-    [lat, long, openhours] = getData.googleData(placeID)
+        google_ranking = getData.getPopularTimes(placeID)  # returns [forecast, current]
+        [feels_like, temps, cloud, forecast, chance_rain] = getData.getWeather()
 
-    google_ranking = getData.getPopularTimes(placeID)  # returns [forecast, current]
-    weather_ranking = getData.getWeather(lat, long)
+        hour = datetime.datetime.now().hour
 
-    # combine weather ranking
-    [temps, forecast, chance_rain] = weather_ranking
-    combine = [a * b for a, b in zip(temps, forecast)]
-    combine = [a * b for a, b in zip(combine, chance_rain)]
+        type_place = getData.getTypePlace()
+        name = getData.getPlaceName()
+        name= name.split("-")[0]
+        [week_trend, day_trend] = getData.getTrends(name)
+        tweets = getData.getTweets(name)
 
-    # if place is a park, weather is weighted more strongly
-    # else it shouldnt add much of an effect
-    # weather is working with decimals !
-    place = getData.getTypePlace()
-    name = getData.getPlaceName()
-    name= name.split("-")[0]
-    trend_weight = getData.getTrends(name)
-    tweet_weight = getData.getTweets(name)
-    tweet_weight = math.log(tweet_weight +1, 30)
-    if tweet_weight < 0.1:
-        tweet_weight = 0.1
+        loaded_model = pickle.load(open('final_model.sav', 'rb'))
 
-    if 'supermarket' in place or 'store' in place or 'grocery_or_supermarket' in place or 'liquor_store' in place:
-        weather_weighting = 1.3
-        tweet_weight = 1
-    if 'park' in place:
-        weather_weighting = 0.8
+        complete_types = ['supermarket',
+     'bakery',
+     'grocery_or_supermarket',
+     'food',
+     'point_of_interest',
+     'store',
+     'establishment',
+     'park',
+     'tourist_attraction',
+     'finance',
+     'train_station',
+     'transit_station',
+     'hospital',
+     'liquor_store',
+     'health',
+     'gas_station',
+     'car_wash',
+     'convenience_store',
+     'pharmacy',
+     'meal_delivery',
+     'restaurant',
+     'pet_store',
+     'meal_takeaway',
+     'natural_feature',
+     'hardware_store',
+     'home_goods_store',
+     'bicycle_store',
+     'car_repair',
+     'clothing_store']
+        encoded_types = [0]* len(complete_types)
 
-    if trend_weight == 0:
-        # assume something went wrong in finding the trend, do nothing
-        trend_weight = 1
-    else:
-        trend_weight = math.log(trend_weight+1, 10)
-    if google_ranking[0] != day_forecast: # not a load of zeros
-        combine = [a * b for a, b in zip(combine, google_ranking[0])]
-        combine = [i * weather_weighting * trend_weight * tweet_weight for i in combine]
-    else:
-        combine = [i * weather_weighting * trend_weight * tweet_weight * 50 for i in combine]
+        for i in range(len(complete_types)):
+            if complete_types[i] in type_place:
+                encoded_types[i] = 1
 
+        # only write if we have legit data
+        if google_ranking[1] != -1 and google_ranking[0] != [0]*24:
+            writer.writerow([placeID, getData.getPlaceName(), hour, type_place, google_ranking[0][hour],
+                         feels_like[hour], temps[hour], cloud[hour], forecast[hour], chance_rain[hour], week_trend, day_trend, tweets, google_ranking[1]])
 
+        # deal with case google returned all 0s (i.e. no forecast)
+        if google_ranking[0] == [0]*24:
+            # google returned no data :(
+            google_ranking[0] = [3,2,2,2,2,3,2,4,9,15,27,45,59,63,64,66,56,46,34,28,27,13,7,5] # calculated using mean for each time
 
+        to_predict = []
+        for i in range(24):
+            to_predict.append([i, google_ranking[0][i], feels_like[i], temps[i], cloud[i], forecast[i], chance_rain[i], week_trend, day_trend, tweets
+            ] + encoded_types)
 
-    for x in range(0, int(openhours[0])):
-        combine[x] = 0
-    if int(openhours[1]) != 0:
-        for x in range(int(openhours[1]), 24):
-            combine[x] = 0
+        to_predict = pd.DataFrame.from_records(data=to_predict)
 
-    shift = datetime.date.today().weekday()
+        output = loaded_model.predict(to_predict)
 
-    currentPrediction = google_ranking[1] * temps[shift] * forecast[shift] * chance_rain[shift] * weather_weighting * trend_weight * tweet_weight
-    day_forecast = combine
+        day_forecast = output.tolist()
 
+        opened = int(openhours[0])
+        closed = int(openhours[1])
+
+        if opened < closed:
+            # normal shop open 9am close 6pm
+            for i in range(0, opened):
+                day_forecast[i] = 0
+            for i in range(closed, 24):
+                day_forecast[i] = 0
+        else:
+            # if time loops round e.g. open 9am to 3am
+            for i in range(closed, opened):
+                day_forecast[i] = 0
+
+        if 'park' in type_place:
+            # reduce the weighting slighly for parks
+            day_forecast = [x * 0.7 for x in day_forecast]
+
+        currentPrediction = day_forecast[datetime.datetime.now().hour]
+
+        if google_ranking[1] != -1:
+            if google_ranking[1] > currentPrediction + 10:
+                currentPrediction = google_ranking[1] # we trust google...
+    except:
+        # ok something has gone wrong
+        # this shouldnt have happened, but just incase lets return average values
+        day_forecast = [3, 2, 2, 2, 2, 3, 2, 4, 9, 15, 27, 45, 59, 63, 64, 66, 56, 46, 34, 28, 27, 13, 7, 5]
+        currentPrediction = day_forecast[datetime.datetime.now().hour]
 
 def getCurrentPrediction():
-    if currentPrediction > 50:
+    if currentPrediction > 70:
         return 4
-    elif currentPrediction > 40:
+    elif currentPrediction > 50:
         return 3
     elif currentPrediction > 25:
         return 2
-    elif currentPrediction > 5:
+    elif currentPrediction > 10:
         return 1
     else:
         return 0
@@ -101,13 +152,13 @@ def getQ():
     if  not getData.getIsOpen():
         return -1
     if 'supermarket' in place or 'store' in place or 'grocery_or_supermarket' in place or 'liquor_store' in place:
-        if currentPrediction < 5:
+        if currentPrediction < 2:
             return 0
-        elif currentPrediction < 10:
+        elif currentPrediction < 5:
             return 1
-        elif currentPrediction < 20:
+        elif currentPrediction < 10:
             return 2
-        elif currentPrediction < 30:
+        elif currentPrediction < 20:
             return 3
         else:
             return 4
