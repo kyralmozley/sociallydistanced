@@ -19,6 +19,7 @@ forecast = []
 chance_rain = []
 trend_rate = 0
 tweet_rate = 0
+openhours = []
 
 file = open('responses.csv', 'a')
 writer = csv.writer(file)
@@ -35,6 +36,7 @@ def makePrediction(placeID):
         global chance_rain
         global trend_rate
         global tweet_rate
+        global openhours
 
         [openhours, place] = getData.googleData(placeID)
 
@@ -175,6 +177,9 @@ def getPlaceName():
 
 def getIsOpen():
     return getData.getIsOpen()
+
+def getOpenHours():
+    return openhours
 
 def getGoogleRanking():
     return google_ranking

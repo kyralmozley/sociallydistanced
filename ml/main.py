@@ -18,13 +18,15 @@ def reply(placeID):
     rating = prediction.getCurrentPrediction()
     day_forecast = prediction.getDayForecast()
     open = prediction.getIsOpen()
+    openhours = prediction.getOpenHours()
     queue = prediction.getQ()
     response = {
       'name' : name,
       'open' : open,
       'rating': rating,
       'day_forecast': day_forecast,
-      'queue' : queue
+      'queue' : queue,
+    'openhours' : openhours
     }
 
     r = json.dumps(response)
