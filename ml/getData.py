@@ -48,7 +48,7 @@ def googleData(placeID):
         open_now = get_data['opening_hours']['open_now']
     else:
         # Google doesn't provide data, so open hours will not affect the output forecast
-        openhours = ['0', '23']
+        openhours = [["0","00"], ["23", "59"]]
 
     # get latlong
     latlong = get_data['geometry']['location']
@@ -172,17 +172,17 @@ def convertOpenHours(data):
         today = today.split("day: ")[1].split(" – ")
         open = today[0].split(" ")
         closed = today[1].split(" ")
-        open[0] = open[0].split(":")[0]
-        closed[0] = closed[0].split(":")[0]
+        open[0] = open[0].split(":")
+        closed[0] = closed[0].split(":")
         if open[1] == 'PM':
-            open[0] = int(open[0]) + 12
+            open[0][0] = int(open[0][0]) + 12
         if closed[1] == 'PM':
-            closed[0] = int(closed[0]) + 12
-        if closed == ['12', 'AM']:
-            closed = ['0', 'AM']
-        return [int(open[0]), int(closed[0])]
+            closed[0][0] = int(closed[0][0]) + 12
+        if closed == [['12','00'], 'AM']:
+            closed = [['0','00'], 'AM']
+        return [open[0], closed[0]]
     except:
-        return [0, 23]
+        return [["0","00"], ["23", "59"]]
 
 
 def getPlaceName():

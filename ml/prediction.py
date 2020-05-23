@@ -108,8 +108,8 @@ def makePrediction(placeID):
 
         day_forecast = output.tolist()
 
-        opened = int(openhours[0])
-        closed = int(openhours[1])
+        opened = int(openhours[0][0])
+        closed = int(openhours[1][0])
         if opened < closed:
             # normal shop open 9am close 6pm
             for i in range(0, opened):
