@@ -175,9 +175,9 @@ def convertOpenHours(data):
         open[0] = open[0].split(":")
         closed[0] = closed[0].split(":")
         if open[1] == 'PM':
-            open[0][0] = int(open[0][0]) + 12
+            open[0][0] = str(int(open[0][0]) + 12)
         if closed[1] == 'PM':
-            closed[0][0] = int(closed[0][0]) + 12
+            closed[0][0] = str(int(closed[0][0]) + 12)
         if closed == [['12','00'], 'AM']:
             closed = [['0','00'], 'AM']
         return [open[0], closed[0]]

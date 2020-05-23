@@ -1772,3 +1772,397 @@ ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,13,"['hardware_store', 'home_goods_store', 'poin
 ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,13,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",35,12.8,22.2,26,803,0,93,44,200,48
 ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,13,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",71,7.7,17.6,3,801,0,52,53,3,31
 ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,13,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",57,11.3,19.7,83,802,0.00048828125,52,53,3,35
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,13,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",57,13.3,23.1,0,801,0,19,65,20,35
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,13,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",10,10.1,15.7,28,803,0,0,5,2,26
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,13,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",63,14.5,22.9,0,801,0,40,59,200,33
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,13,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",17,14.1,22.9,1,801,0,100,6,200,29
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,13,"['park', 'point_of_interest', 'establishment']",17,10.3,14.7,55,803,0,32,18,3,29
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,13,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",73,13.2,14.6,100,803,0.00048828125,52,52,200,41
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,13,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",57,13,21.3,22,803,0,52,35,200,32
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,13,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",55,11.8,17,96,803,0.0087890625,12,27,26,15
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,13,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",72,11,20.9,65,803,0,27,40,200,51
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,14,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",27,12.3,21.8,22,802,0,0,20,55,120
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,14,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",63,12,22.4,0,801,0,0,20,55,39
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,14,"['point_of_interest', 'establishment']",59,12.3,22.4,0,801,0,15,23,88,10
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,14,"['point_of_interest', 'store', 'establishment']",51,12.5,22.2,1,800,0,100,30,0,71
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,14,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",46,10.6,19.8,98,802,0,75,28,200,71
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,14,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",50,9.5,16.1,70,801,0,64,67,200,71
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,14,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",63,12.3,22.4,0,801,0,0,7,200,71
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,14,"['pet_store', 'point_of_interest', 'store', 'establishment']",36,12.3,22.4,0,801,0,34,15,200,49
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,14,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",37,11.1,21.5,5,801,0,33,30,200,34
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,14,"['point_of_interest', 'store', 'establishment']",67,11,15.8,95,803,0,68,68,193,16
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,14,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",77,8.9,18.8,33,801,0,51,39,200,43
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,14,"['park', 'point_of_interest', 'establishment']",51,7.9,11.6,72,802,0,14,36,0,33
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,14,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",26,11.5,13.4,56,802,0,100,23,3,55
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,14,"['point_of_interest', 'establishment']",25,9.4,14.9,19,800,0,68,20,8,28
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,14,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",54,13,23.2,1,801,0,59,43,200,80
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,14,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",30,12.3,21.8,22,802,0,92,43,200,37
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,14,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",71,4,16.1,80,802,0,51,30,3,29
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,14,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",49,11.1,19.9,15,802,0,51,30,3,23
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,14,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",49,12.7,22.8,0,801,0,19,55,16,23
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,14,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",11,9.8,15.7,55,803,0,0,3,2,37
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,14,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",62,12.3,22.4,0,801,0,40,56,200,28
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,14,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",20,12.4,22.6,3,801,0,100,6,200,36
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,14,"['park', 'point_of_interest', 'establishment']",20,9.9,15.2,81,802,0.0693359375,0,17,3,36
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,14,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",72,13.5,16.1,100,803,0,52,57,200,42
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,14,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",56,12.5,21.4,21,802,0,52,38,200,27
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,14,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",69,11.7,16.1,71,802,0,13,29,28,18
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,14,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",67,10.3,18.6,80,802,0,27,24,200,48
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,14,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",27,12.3,21.8,22,802,0,0,13,59,137
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,15,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",60,12,19.6,2,800,0,0,13,59,42
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,15,"['point_of_interest', 'establishment']",70,12.2,19.6,8,800,0,15,24,95,11
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,15,"['point_of_interest', 'store', 'establishment']",49,12.5,19.4,0,800,0,100,25,0,79
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,15,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",52,10.7,17.1,98,800,0,75,28,200,55
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,15,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",35,9.6,14.4,63,801,0,64,62,200,5
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,15,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",43,12.2,19.6,8,800,0,0,10,200,5
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,15,"['pet_store', 'point_of_interest', 'store', 'establishment']",36,12.2,19.6,8,800,0,34,24,200,52
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,15,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",32,11.2,17.9,1,801,0,35,55,200,45
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,15,"['point_of_interest', 'store', 'establishment']",58,11.3,14.6,100,803,0,68,76,196,11
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,15,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",78,9,15.3,2,800,0,51,59,200,29
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,15,"['park', 'point_of_interest', 'establishment']",45,7.5,10.1,89,741,0,14,36,0,29
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,15,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",20,11.2,13.1,90,803,0,100,38,2,62
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,15,"['point_of_interest', 'establishment']",19,9.4,13.6,28,801,0,68,34,8,30
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,15,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",47,14.1,18.9,98,801,0,59,37,200,77
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,15,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",28,14.1,16.8,13,801,0,93,58,200,36
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,15,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",69,9.2,11.7,81,803,0,51,50,5,28
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,15,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",47,12.3,15,18,800,0,51,50,5,18
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,15,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",47,13.6,18.5,78,801,0,25,60,15,18
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,15,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",12,11.5,13.3,95,802,0,0,4,2,50
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,15,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",61,13.9,18.7,89,801,0,40,48,200,26
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,15,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",23,12.4,19.8,18,801,0,100,11,200,41
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,15,"['park', 'point_of_interest', 'establishment']",23,10.6,11.3,80,800,0,32,29,3,41
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,15,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",71,14.4,13.9,57,803,0,52,57,200,44
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,15,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",54,14.1,16.7,14,801,0,52,51,200,26
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,15,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",79,10.9,13.1,93,802,0,13,45,29,12
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,15,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",62,8.8,12.9,75,803,0,27,51,200,43
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,15,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",23,14.1,16.8,13,801,0,0,25,56,165
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,16,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",65,15.8,16.2,89,800,0,0,25,56,41
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,16,"['point_of_interest', 'establishment']",79,18.1,15.7,100,801,0,15,23,89,9
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,16,"['point_of_interest', 'store', 'establishment']",44,18.1,15.4,75,801,0,100,29,0,66
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,16,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",59,17.2,12.9,2,801,0,75,28,200,51
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,16,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",43,15.4,10.7,2,741,0,64,66,200,12
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,16,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",41,15.8,16.7,100,800,0,0,11,200,12
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,16,"['pet_store', 'point_of_interest', 'store', 'establishment']",32,15.8,16.7,100,800,0,34,16,200,31
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,16,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",34,17.9,13.7,66,801,0,35,30,200,43
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,16,"['point_of_interest', 'store', 'establishment']",60,15.8,12.4,53,802,0,68,68,195,18
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,16,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",77,15.9,11.1,40,800,0,51,39,200,30
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,16,"['park', 'point_of_interest', 'establishment']",38,11.8,8.9,41,741,0,14,37,0,31
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,16,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",12,13,12.4,45,803,0,100,28,2,51
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,16,"['point_of_interest', 'establishment']",12,14.4,11.5,17,800,0,68,20,9,35
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,16,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",37,16.1,16.7,93,800,0,59,43,200,70
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,16,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",25,16.5,14.9,50,801,0,93,44,200,40
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,16,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",67,12.2,9.9,100,803,0,51,30,5,31
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,16,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",50,14.8,13,57,800,0,51,30,5,24
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,16,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",50,15.7,16.3,100,800,0,25,56,13,24
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,16,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",12,13.6,12.2,100,801,0,0,3,2,59
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,16,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",70,18.1,15.7,100,801,0,41,57,200,32
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,16,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",25,18.3,15.3,55,801,0,100,6,200,45
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,16,"['park', 'point_of_interest', 'establishment']",25,12,9.7,73,800,0,32,17,3,45
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,16,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",70,18.1,15.7,100,801,0,32,17,200,32
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,16,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",70,18.1,15.7,100,801,0,32,17,200,38
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,17,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",81,20,14,18,800,0,32,17,200,39
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,17,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",81,20,14,18,800,0,37,57,200,37
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,17,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",27,20.3,13.7,11,800,0,62,6,200,50
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,17,"['park', 'point_of_interest', 'establishment']",27,17.6,9.6,51,803,0,97,16,3,50
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,17,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",67,18.1,13.4,92,803,0.0048828125,54,57,200,31
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,17,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",61,22.5,12.4,88,800,0,57,38,200,32
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,17,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",77,18.1,11.6,3,802,0,39,29,28,7
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,17,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",53,18.5,9.8,4,741,0,26,45,200,48
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,17,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",14,22.5,12.5,55,800,0,0,33,54,160
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,17,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",77,22.1,13.1,6,800,0,0,33,54,38
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,17,"['point_of_interest', 'establishment']",80,21.9,13.4,7,800,0,22,24,89,7
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,17,"['point_of_interest', 'store', 'establishment']",37,21.7,13.5,23,800,0,33,30,1,64
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,17,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",65,20.5,11.3,26,802,0,62,27,200,27
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,17,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",46,18.9,9.5,34,741,0,62,66,200,9
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,17,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",50,21.9,13.4,7,800,0,0,8,200,9
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,17,"['pet_store', 'point_of_interest', 'store', 'establishment']",25,21.9,13.4,7,800,0,0,19,200,28
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,17,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",40,20.8,11.7,8,800,0,31,30,200,45
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,17,"['point_of_interest', 'store', 'establishment']",0,18.1,11.2,75,741,0,68,69,193,11
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,17,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",66,19,9.1,4,800,0,55,39,200,25
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,17,"['park', 'point_of_interest', 'establishment']",29,16.3,8,6,741,0,0,30,0,22
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,17,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",7,15.2,11.6,90,802,0,0,25,0,40
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,17,"['point_of_interest', 'establishment']",7,16,9.8,63,803,0,24,21,8,22
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,17,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",33,22.3,13.6,8,800,0,59,43,200,84
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,17,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",27,22.5,12.7,100,802,0,100,43,200,68
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,17,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",62,16.6,7.1,85,741,0,44,31,5,29
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,18,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",35,22.4,12.3,100,803,0,44,31,5,34
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,18,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",35,24.1,13.4,13,800,0,27,55,13,34
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,18,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",13,22.5,11.5,93,803,0,0,3,2,80
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,18,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",82,23.2,12.6,51,800,0,37,56,200,35
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,18,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",31,24.2,13.4,23,802,0,62,6,200,50
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,18,"['park', 'point_of_interest', 'establishment']",31,18.4,9.5,35,741,0,97,18,4,50
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,18,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",57,19.3,13.5,87,803,0.0009765625,54,57,200,36
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,18,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",59,23.6,12.2,42,801,0,57,38,200,28
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,18,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",65,19.3,11.2,3,741,0,0,36,26,2
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,18,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",42,20.3,8.2,4,741,0,26,44,200,39
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,18,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",11,23.6,12.2,17,801,0,0,31,55,191
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,18,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",81,23.2,12.4,31,801,0.0009765625,0,31,55,28
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,18,"['point_of_interest', 'establishment']",74,23.2,12.6,51,800,0,22,25,93,2
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,18,"['point_of_interest', 'store', 'establishment']",29,23.1,12.8,87,800,0.0009765625,33,31,1,73
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,18,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",68,21.7,11,24,741,0,62,27,200,24
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,18,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",28,20.7,9.7,31,741,0,62,65,200,24
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,18,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",62,23.2,12.6,51,800,0,0,8,200,24
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,18,"['pet_store', 'point_of_interest', 'store', 'establishment']",29,23.2,12.6,51,800,0,0,17,200,30
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,18,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",47,21.9,10.9,5,741,0,31,30,200,57
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,18,"['point_of_interest', 'store', 'establishment']",0,19.2,11.1,75,741,0.0009765625,68,68,198,57
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,18,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",45,20.3,8.2,18,741,0,55,39,200,22
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,18,"['park', 'point_of_interest', 'establishment']",21,17.6,6.9,4,741,0,0,29,0,21
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,18,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",3,14.9,11.1,24,803,0,0,26,0,39
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,18,"['point_of_interest', 'establishment']",3,16.4,9,35,741,0,24,20,9,15
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,18,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,23.7,12.8,24,800,0,59,42,200,47
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,18,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",39,23.7,12.3,8,801,0,100,43,200,56
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,18,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",53,17.8,7,100,801,0,44,32,5,25
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,19,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",21,23.3,16.9,33,802,0,44,32,5,26
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,19,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",21,24.8,17.7,32,803,0,27,48,15,26
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,19,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",11,23.7,15.8,76,801,0,0,2,2,83
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,19,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",67,25.5,20.3,27,800,0,37,35,200,25
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,19,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",33,25,17.7,51,803,0,62,4,200,44
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,19,"['park', 'point_of_interest', 'establishment']",33,20.9,16.2,11,802,0,97,12,5,44
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,19,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",44,20.5,17.6,93,802,0,53,38,5,30
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,19,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",48,25.9,21,65,803,0,57,26,200,21
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,19,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",50,23,16,3,800,0,0,37,27,21
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,19,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",28,24.5,17.2,4,800,0,26,45,200,28
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,19,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",8,25.8,21,74,803,0,0,29,56,248
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,19,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",68,25.1,20.2,34,800,0,0,29,56,29
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,19,"['point_of_interest', 'establishment']",61,25.5,20.3,27,800,0,22,23,97,29
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,19,"['point_of_interest', 'store', 'establishment']",22,25.5,20.3,22,800,0,31,32,0,72
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,19,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",69,24.2,19.1,6,801,0,58,27,200,26
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,19,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",10,23.8,17.3,4,801,0,62,65,200,26
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,19,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",66,25.5,20.3,27,800,0,0,7,200,26
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,19,"['pet_store', 'point_of_interest', 'store', 'establishment']",26,25.5,20.3,27,800,0,0,18,200,36
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,19,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",51,24.3,19.7,32,802,0,30,30,200,72
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,19,"['point_of_interest', 'store', 'establishment']",0,22,17.2,90,803,0,67,69,200,72
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,19,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",23,23.5,17.7,100,801,0,56,39,200,17
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,19,"['park', 'point_of_interest', 'establishment']",14,19.1,14.1,7,802,0,0,37,0,16
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,19,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",1,14.4,14.6,1,802,0,45,26,0,29
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,19,"['point_of_interest', 'establishment']",1,16.8,15.3,6,800,0,48,21,10,13
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,19,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,25.5,20.6,33,800,0,57,43,200,20
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,19,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",15,25.8,21,74,803,0,98,43,200,18
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,19,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",39,20.9,15.2,11,802,0,30,32,5,21
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,20,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",0,24.3,21.8,34,803,0,30,32,5,20
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,20,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,24.4,24.4,100,801,0,40,44,18,20
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,20,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",9,24.6,22.8,5,803,0,0,3,2,76
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,20,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",43,25.1,23.7,27,800,0,41,47,200,20
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,20,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",30,24.4,24.5,82,801,0,58,5,200,44
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,20,"['park', 'point_of_interest', 'establishment']",30,21.1,18.9,4,802,0,64,16,3,44
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,20,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",30,20.8,19,92,803,0,52,47,200,31
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,20,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",30,26,24.3,4,802,0,54,32,200,14
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,20,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",35,19.3,20,9,800,0,0,36,27,14
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,20,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",15,25.1,20.9,15,800,0,24,45,200,26
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,20,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",6,26,24.3,10,801,0,0,29,56,227
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,20,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",44,24.8,23.8,77,801,0,0,29,56,27
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,20,"['point_of_interest', 'establishment']",44,25.1,23.7,27,800,0,16,23,98,27
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,20,"['point_of_interest', 'store', 'establishment']",0,25.5,23.6,30,800,0,24,31,0,53
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,20,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",68,24.6,22.3,13,801,0,58,27,0,17
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,20,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",0,24.3,21.3,3,803,0,62,65,200,17
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,20,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",60,24.9,24.7,25,801,0,0,6,200,17
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,20,"['pet_store', 'point_of_interest', 'store', 'establishment']",0,24.9,24.7,25,801,0,0,19,200,17
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,20,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",50,24.5,22.4,48,800,0,30,30,200,52
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,20,"['point_of_interest', 'store', 'establishment']",0,22.1,19.7,42,802,0,67,68,200,52
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,20,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",8,23.9,20.8,100,801,0,56,39,200,19
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,20,"['park', 'point_of_interest', 'establishment']",9,19.2,17.6,4,800,0,0,37,0,14
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,20,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",1,14.5,14.9,0,801,0,45,27,0,27
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,20,"['point_of_interest', 'establishment']",0,16.8,16.4,13,801,0,48,21,9,9
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,20,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,25.1,24.1,37,801,0,57,43,200,10
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,20,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",0,26,24.3,10,801,0,98,43,200,10
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,20,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",25,21,17.8,10,803,0,30,33,3,15
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,20,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",0,24.3,21.8,34,803,0,30,33,3,15
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,21,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,23.7,25.4,3,801,0,30,33,22,15
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,21,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",6,24.2,24.8,3,801,0,0,4,3,60
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,21,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",22,24.1,25.7,77,800,0,41,58,200,13
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,21,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",20,23.7,25.3,3,801,0,58,6,200,31
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,21,"['park', 'point_of_interest', 'establishment']",20,19.9,21.5,9,803,0,67,15,3,31
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,21,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",18,19.6,21,23,803,0,53,57,200,33
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,21,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",15,25.1,26.6,59,801,0,53,38,200,10
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,21,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",24,18.1,20.2,21,801,0,21,32,28,10
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,21,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",7,23.6,25.4,95,801,0,24,45,200,23
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,21,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",4,25,26.5,65,801,0,41,33,57,152
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,21,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",0,22.3,25.5,65,800,0,41,33,57,16
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,21,"['point_of_interest', 'establishment']",29,22.7,25.7,13,800,0,16,24,91,16
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,21,"['point_of_interest', 'store', 'establishment']",0,23.1,25.8,15,800,0,35,29,0,16
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,21,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",65,23.7,25.1,63,803,0,61,27,200,11
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,21,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",0,23.4,24.6,44,801,0,61,65,200,11
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,21,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",0,24.1,25.7,77,800,0,0,7,200,11
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,21,"['pet_store', 'point_of_interest', 'store', 'establishment']",0,24.1,25.7,77,800,0,0,19,200,11
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,21,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",46,22.4,24.9,99,801,0,31,30,200,54
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,21,"['point_of_interest', 'store', 'establishment']",0,20.9,22.5,36,802,0,71,67,200,54
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,21,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,22.1,24.4,76,802,0,56,39,200,54
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,21,"['park', 'point_of_interest', 'establishment']",6,17.8,20,1,800,0,0,28,0,14
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,21,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",0,14.8,14.7,0,800,0,45,28,0,24
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,21,"['point_of_interest', 'establishment']",3,14.6,16.8,76,800,0,63,21,8,9
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,21,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,22.7,25.7,17,801,0,56,42,200,9
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,21,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",0,25,26.5,65,801,0,98,43,200,9
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,21,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",13,18.9,21.7,35,800,0,27,31,4,14
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,21,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",0,23.2,24.8,43,803,0,27,31,4,14
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,22,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,18.9,23.1,100,801,0,27,31,23,14
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,22,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",3,20.2,23.9,15,800,0,0,4,2,39
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,22,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,21.1,24.5,100,803,0,41,58,200,13
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,22,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",10,20.7,24.2,100,803,0,55,6,200,13
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,22,"['park', 'point_of_interest', 'establishment']",10,18.5,20.9,32,803,0,67,16,4,13
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,22,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",0,17.7,20.9,18,803,0,53,57,200,25
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,22,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,23.6,26,52,801,0,53,39,200,25
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,22,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",25,17.4,19.2,0,800,0,21,31,29,5
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,22,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,19.3,25.6,66,803,0,24,45,200,5
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,22,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",3,23.3,26,46,801,0,41,33,58,71
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,22,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",0,20.7,24.2,100,803,0,41,33,58,71
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,22,"['point_of_interest', 'establishment']",16,21.1,24.5,100,803,0,15,24,89,71
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,22,"['point_of_interest', 'store', 'establishment']",0,21.4,24.8,100,801,0,24,28,0,71
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,22,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",59,22.3,24.8,31,803,0,61,27,200,5
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,22,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",0,21.9,24.5,25,800,0,61,64,200,5
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,22,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",0,21.1,24.5,100,803,0,0,7,200,5
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,22,"['pet_store', 'point_of_interest', 'store', 'establishment']",0,21.1,24.5,100,803,0,0,20,200,5
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,22,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",0,20.6,24.1,100,802,0,31,30,200,37
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,22,"['point_of_interest', 'store', 'establishment']",0,19.6,22.2,33,801,0,71,67,200,37
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,22,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,20.4,23.7,43,803,0,56,40,200,37
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,22,"['park', 'point_of_interest', 'establishment']",4,16.4,18.6,0,801,0,0,29,0,11
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,22,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",0,15.1,14.4,0,800,0,45,30,0,9
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,22,"['point_of_interest', 'establishment']",8,12.7,16,72,801,0,64,21,7,5
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,22,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,21.1,24.5,100,802,0,56,42,200,5
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,22,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",0,23.3,26,46,801,0,98,43,200,5
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,22,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,18,20.5,0,800,0,27,32,4,4
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,22,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",0,21.6,24.4,49,802,0,27,32,4,4
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,23,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,17.9,19.5,80,803,0,35,45,23,4
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,23,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",1,18.5,20.7,30,801,0,0,4,2,15
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,23,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,17.8,18.2,84,803,0,41,59,200,15
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,23,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",3,17.8,19.4,72,803,0,51,6,200,3
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,23,"['park', 'point_of_interest', 'establishment']",3,14.4,15.3,34,800,0,67,17,4,3
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,23,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",0,13.7,15.1,0,802,0,53,58,156,9
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,23,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,17.7,19.3,100,803,0,53,39,200,9
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,23,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",13,14.3,15,0,800,0,21,28,29,9
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,23,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,13.5,14.5,1,800,0,24,45,200,9
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,23,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",2,17.4,18.9,99,803,0,41,35,62,22
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,23,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",0,17.7,17.8,85,802,0,41,35,62,22
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,23,"['point_of_interest', 'establishment']",8,18.2,19.8,84,803,0,15,24,92,22
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,23,"['point_of_interest', 'store', 'establishment']",0,17.8,18.4,88,803,0,35,32,0,22
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,23,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",52,17.8,18.8,50,802,0,61,27,200,12
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,23,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",0,16.8,18.2,46,800,0,61,65,200,12
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,23,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",0,17.8,18.2,84,803,0,0,6,200,12
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,23,"['pet_store', 'point_of_interest', 'store', 'establishment']",0,17.8,18.2,84,803,0,0,19,200,12
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,23,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",0,15.5,16.9,37,803,0,31,31,200,12
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,23,"['point_of_interest', 'store', 'establishment']",0,14.1,15.5,0,800,0,71,67,200,12
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,23,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,15.4,16.4,20,801,0,55,39,200,12
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,23,"['park', 'point_of_interest', 'establishment']",2,11.5,12.7,99,801,0,0,32,0,9
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,23,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",0,14.3,14.7,0,800,0,45,33,0,3
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,23,"['point_of_interest', 'establishment']",13,12.8,13.2,0,800,0,64,21,7,3
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,23,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,17.5,18.6,57,803,0,56,43,200,3
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,23,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",0,17.3,18.6,88,803,0,98,43,200,3
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,23,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,13.2,14.3,76,800,0,27,32,4,1
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,23,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",0,16.7,17.9,93,801,0,27,32,4,1
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,0,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,16.7,16.7,22,801,0,35,46,23,1
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,0,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,11.7,11.7,11,800,0,0,5,2,4
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,0,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,16.7,16.7,0,800,0,41,58,200,4
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,0,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,15.7,15.7,100,803,0,51,6,200,4
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,0,"['park', 'point_of_interest', 'establishment']",0,10.2,10.2,5,800,0,63,16,4,4
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,0,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",0,13.6,13.6,99,803,0,53,58,200,1
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,0,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,15.7,15.7,30,801,0,53,38,200,1
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,0,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",2,11.8,11.8,88,803,0.00048828125,21,31,30,1
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,0,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,11.8,11.8,95,803,0,24,45,200,1
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,0,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",1,15.6,15.6,20,801,0,41,31,66,11
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,0,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",0,16.2,16.2,0,800,0,41,31,66,11
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,0,"['point_of_interest', 'establishment']",4,16.1,16.1,96,803,0,15,23,93,11
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,0,"['point_of_interest', 'store', 'establishment']",0,16.6,16.6,2,800,0,35,30,0,11
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,0,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",43,13.9,13.9,0,800,0,61,27,200,19
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,0,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",0,11.7,11.7,7,800,0,61,65,199,19
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,0,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",0,16.1,16.1,96,803,0,0,10,199,19
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,0,"['pet_store', 'point_of_interest', 'store', 'establishment']",0,16.1,16.1,96,803,0,0,19,199,19
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,0,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",0,15.4,15.4,39,801,0,31,31,200,1
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,0,"['point_of_interest', 'store', 'establishment']",0,13.1,13.1,100,803,0,71,67,200,1
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,0,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,12.4,12.4,3,800,0,55,39,200,1
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,0,"['park', 'point_of_interest', 'establishment']",1,9,9,100,803,0,0,36,0,7
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,0,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",1,12.4,12.4,91,803,0,45,36,0,2
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,0,"['point_of_interest', 'establishment']",13,12.2,12.2,6,801,0,64,22,7,1
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,0,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,17.1,17.1,24,801,0,56,43,200,1
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,0,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",0,16.2,16.2,33,801,0,98,43,200,1
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,0,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,10.4,10.4,21,801,0,27,32,4,1
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,0,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",0,13.7,13.7,14,801,0,27,32,4,1
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,0,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,16.7,16.7,22,801,0,39,44,23,1
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,1,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",1,11.1,10.7,32,802,0,0,4,2,3
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,1,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,15.5,14.5,69,802,0,40,58,200,3
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,1,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,14.9,14,64,802,0,49,6,200,3
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,1,"['park', 'point_of_interest', 'establishment']",0,10.4,10.6,80,801,0,34,15,4,3
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,1,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",0,12.9,13,100,803,0.01953125,52,58,200,1
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,1,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,13.2,12.8,9,801,0,58,38,200,1
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,1,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",0,11.2,11.3,87,802,0,17,30,31,1
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,1,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,11.3,10.8,66,741,0,26,45,200,1
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,1,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,13.6,12.8,8,801,0,54,30,67,7
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,1,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",0,14,13.4,39,802,0,54,30,67,7
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,1,"['point_of_interest', 'establishment']",1,15.5,14.5,69,802,0,12,23,96,7
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,1,"['point_of_interest', 'store', 'establishment']",0,14.6,13.8,2,801,0,64,28,0,7
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,1,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",36,12,11.8,36,800,0,61,27,200,15
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,1,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",0,9.8,9.6,73,741,0,60,64,200,15
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,1,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",0,15.5,14.5,69,802,0,0,10,200,15
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,1,"['pet_store', 'point_of_interest', 'store', 'establishment']",0,15.5,14.5,69,802,0,49,22,200,15
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,1,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",0,12.8,12,6,800,0,31,31,200,15
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,1,"['point_of_interest', 'store', 'establishment']",0,11.7,11.3,82,803,0,68,67,200,15
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,1,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,10,9.5,19,801,0,58,39,200,15
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,1,"['park', 'point_of_interest', 'establishment']",0,7.8,7.2,85,801,0,23,32,0,7
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,1,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",1,11.4,11.1,5,802,0,46,35,0,7
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,1,"['point_of_interest', 'establishment']",8,10.6,9.9,0,800,0,81,22,7,7
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,1,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,14.5,13.8,41,802,0,56,43,7,7
+ChIJY6WBrGFw2EcRQ9_h91Pd_eE,Halfords - Cambridge,1,"['bicycle_store', 'car_repair', 'point_of_interest', 'clothing_store', 'store', 'establishment']",0,13.6,12.8,8,801,0,96,43,200,7
+ChIJB68ePhgibkgRfmORxBM2Mtg,Tesco Superstore,1,"['supermarket', 'convenience_store', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,7.5,6.8,9,741,0,38,32,4,7
+ChIJAf6HEbLfeUgR73OnKEArLcE,Waitrose & Partners Mountsorrell,1,"['supermarket', 'grocery_or_supermarket', 'liquor_store', 'food', 'point_of_interest', 'store', 'establishment']",0,12,11.5,34,800,0,38,32,4,7
+ChIJ2yb0sesadkgRIQOyE6qMxLU,Primrose Hill,1,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,14.2,13.4,51,801,0,53,43,25,7
+ChIJxT358KxeeUgRcr9xzVYqQXQ,Woodhouse Moor,2,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",1,10.5,10.5,54,803,0,0,5,2,7
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,2,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,13,13.9,20,801,0,0,5,200,7
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,2,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,12.8,13.7,7,801,0,53,6,200,7
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,2,"['park', 'point_of_interest', 'establishment']",0,10.6,9.8,50,741,0,34,13,4,7
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,2,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",0,13,12.8,85,803,0.00390625,52,58,197,3
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,2,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,12.8,12.7,17,801,0,58,39,200,3
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,2,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",0,11.3,11.2,69,802,0,17,28,30,1
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,2,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,10.8,9.4,51,741,0,26,45,200,1
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,2,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",1,12.8,12.5,19,801,0,54,29,71,3
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,2,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",0,13.4,12.6,41,801,0,54,29,71,3
+ChIJL7CVDxgbdkgRnNimu0Q_Otc,Kings Cross - St Pancras,2,"['point_of_interest', 'establishment']",0,13.2,14.1,14,801,0,12,25,96,3
+ChIJ5SWYXpgedkgRkiXdc02xVNE,B&M Home Store,2,"['point_of_interest', 'store', 'establishment']",0,13.8,13,18,801,0,64,28,0,3
+ChIJTaLYdX7BeUgRygTs7Pnl8M0,Shell,2,"['gas_station', 'car_wash', 'convenience_store', 'food', 'point_of_interest', 'store', 'establishment']",28,11.8,11.3,4,800,0,59,27,200,7
+ChIJTSxJs8axe0gRutKEEH4vhs4,Boots,2,"['pharmacy', 'health', 'point_of_interest', 'store', 'establishment']",0,9.6,9.6,65,741,0,60,65,179,7
+ChIJPZUqGSAbdkgRe0yzDRgr8vE,KFC Mornington Crescent,2,"['meal_delivery', 'restaurant', 'food', 'point_of_interest', 'establishment']",0,13,13.9,20,801,0,0,9,179,7
+ChIJU_AZ8xwbdkgRqSEKycvPoGs,Pets at Home Camden,2,"['pet_store', 'point_of_interest', 'store', 'establishment']",0,13,13.9,20,801,0,49,21,179,7
+ChIJZ50ILt5IdkgRqNnXuD2JES8,McDonald's,2,"['restaurant', 'meal_takeaway', 'food', 'point_of_interest', 'establishment']",0,12,11.3,9,801,0,30,32,200,7
+ChIJSz0wcslwfkgRYX9W99EHOUE,Superdrug,2,"['point_of_interest', 'store', 'establishment']",0,11.3,11.1,100,741,0,68,68,200,7
+ChIJ_W7bFJYbcUgRlleJU3U406o,Lidl,2,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,9.5,8.6,10,741,0,58,39,200,7
+ChIJuYjH7UZ7ZUgRp3v5A9XLf_8,Snowdonia National Park,2,"['park', 'point_of_interest', 'establishment']",1,4.1,6.5,46,741,0,23,31,0,8
+ChIJmd_jgNJGe0gR50Xi5wtGO_k,St Anne's Beach,2,"['tourist_attraction', 'natural_feature', 'point_of_interest', 'establishment']",0,11.1,10.9,49,802,0,46,34,0,8
+ChIJ15bUOgr3ckgRpCGJ40tzuWQ,Weymouth Beach,2,"['point_of_interest', 'establishment']",3,9.9,9,0,741,0,81,22,7,8
+ChIJgTRdQwMEdkgRfQ4hI9QEpSU,B&Q,2,"['hardware_store', 'home_goods_store', 'point_of_interest', 'store', 'establishment']",0,13.8,13.1,47,800,0,56,43,200,8
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,2,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,13,13.9,20,801,0,40,58,200,8
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,2,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,12.8,13.7,7,801,0,49,6,200,8
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,2,"['park', 'point_of_interest', 'establishment']",0,9.7,11.3,21,802,0,34,14,5,8
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,2,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",0,13,13.8,70,802,0,52,58,5,4
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,3,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,14.1,20.6,25,801,0,40,58,200,4
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,3,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,14,20.6,19,801,0,49,6,200,4
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,3,"['park', 'point_of_interest', 'establishment']",0,9.7,15.4,15,803,0,34,16,5,4
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,4,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,15.8,24,31,803,0,40,58,200,5
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,4,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,15.8,24,50,803,0,49,6,200,5
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,4,"['park', 'point_of_interest', 'establishment']",0,15.4,20.1,100,803,0,34,15,5,5
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,5,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,22,26.1,80,801,0,40,57,200,4
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,5,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,22.1,25.9,96,800,0,53,6,200,1
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,5,"['park', 'point_of_interest', 'establishment']",0,16.8,21.3,100,803,0,42,16,5,1
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,6,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,23.6,25,82,800,0,40,57,200,4
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,6,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,23.6,24.7,100,800,0,49,6,200,1
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,6,"['park', 'point_of_interest', 'establishment']",0,20,20.7,87,801,0,42,16,5,1
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,7,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,25.7,18.8,31,801,0,40,57,200,6
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,7,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,25.3,18.6,87,801,0,53,6,200,3
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,7,"['park', 'point_of_interest', 'establishment']",0,20.6,17.4,79,802,0,42,16,5,3
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,7,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",0,25.7,18.8,31,801,0,40,57,200,8
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,7,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",0,25.3,18.6,87,801,0,49,6,200,8
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,7,"['park', 'point_of_interest', 'establishment']",0,21.2,15.7,67,801,0,42,17,5,8
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,8,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",17,24.8,16.4,11,800,0,40,57,200,13
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,8,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",1,24.6,16.4,3,800,0,49,6,200,14
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,8,"['park', 'point_of_interest', 'establishment']",1,21.7,13.8,50,801,0,42,16,5,14
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,9,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",24,24,15.6,57,801,0,40,57,200,18
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,9,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",3,23.7,15.3,100,801,0,49,6,200,18
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,9,"['park', 'point_of_interest', 'establishment']",3,20,10.7,16,800,0,42,17,6,18
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,10,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",27,19.8,16.3,51,802,0,40,56,200,17
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,13,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",51,15.1,25.6,0,801,0,40,56,200,33
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,13,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",18,14.5,25.3,0,801,0,53,6,200,29
+ChIJpzm3HB4bdkgR5BytQRbMiCc,Sainsbury's,13,"['supermarket', 'bakery', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",51,15.1,25.6,0,801,0,40,56,200,32
+ChIJhRoYKUkFdkgRDL20SU9sr9E,Hyde Park,13,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",18,14.5,25.3,0,801,0,53,6,200,28
+ChIJ-0tfftstekgR6oITC6qZoHk,Peak District National Park,13,"['park', 'point_of_interest', 'establishment']",18,10.9,21.8,0,803,0,42,17,7,28
+ChIJFa_PuNXFh0gRxFmJDYSbeNo,Tesco,13,"['supermarket', 'grocery_or_supermarket', 'finance', 'food', 'point_of_interest', 'store', 'establishment']",59,10,21.8,46,802,0,52,60,200,33
+ChIJKWVlUsRw2EcRqYaqw-Wv410,ALDI,13,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",37,14.1,26.9,0,802,0,58,39,200,38
+ChIJUSjtYCQhe0gRaFlTJAbaEaE,Liverpool Central,13,"['train_station', 'transit_station', 'point_of_interest', 'establishment']",38,11.5,18.6,14,803,0,30,21,26,8
+ChIJrYJyjivDekgRZtRiyQ3EVo4,Morrisons,13,"['supermarket', 'grocery_or_supermarket', 'food', 'point_of_interest', 'store', 'establishment']",66,9.1,25.4,11,802,0,25,46,200,45
+ChIJP1nbLZVw2EcR4Ux2VAZ3Cmw,Jesus Green,13,"['park', 'tourist_attraction', 'point_of_interest', 'establishment']",41,13.9,26.7,2,801,0,0,33,69,123
+ChIJF87tCrUadkgR4FN5LwLXMWA,Waitrose & Partners Edgware,13,"['supermarket', 'hospital', 'grocery_or_supermarket', 'liquor_store', 'food', 'health', 'point_of_interest', 'store', 'establishment']",44,14.5,25.3,0,801,0,0,33,69,29
