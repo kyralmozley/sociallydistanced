@@ -22,18 +22,16 @@ module.exports = (script, args) => {
 				scriptPath: pyRoot,
 			},
 			(err, results) => {
-				console.log(3)
 				if (err) {
 					console.error(err)
 					return reject(err)
 				}
 
 				try {
-					console.log(results)
 					if (process.env.NODE_ENV == "development") {
-						console.log(results[0])
+						console.log(results)
 					}
-					const json = JSON.parse(results[0])
+					const json = results ? JSON.parse(results[0]) : undefined
 
 					resolve(json)
 				} catch (err) {
