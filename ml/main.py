@@ -1,6 +1,6 @@
 #!/usr/bin/env python -W ignore::DeprecationWarning
 # -*- coding: utf-8 -*-
-
+# version 1
 '''
 Receive and generate requests to speak to the website
 author: Kyra Mozley
@@ -28,7 +28,8 @@ def reply(placeID):
       'rating': rating,
       'day_forecast': day_forecast,
       'queue' : queue,
-      'openhours' : openhours
+      'openhours' : openhours,
+      'version': 1
     }
 
     r = json.dumps(response)

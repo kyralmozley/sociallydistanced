@@ -9,6 +9,8 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 import getData
 
+# version 1
+
 currentPrediction = 0
 day_forecast = [0]*24
 google_ranking = 0
