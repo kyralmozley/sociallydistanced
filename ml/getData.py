@@ -170,7 +170,7 @@ def getTweets(place):
 def convertOpenHours(data):
     try:
         # try to split the horrifying "Monday: 09:00AM - 11:00PM" into [9, 23]
-        today = data[5]
+        today = data[datetime.date.today().weekday()]
         today = today.split("day: ")[1].split(" – ")
         open = today[0].split(" ")
         closed = today[1].split(" ")
