@@ -170,19 +170,30 @@ def getTweets(place):
 def convertOpenHours(data):
     try:
         # try to split the horrifying "Monday: 09:00AM - 11:00PM" into [9, 23]
-        today = data[datetime.date.today().weekday()]
+        today = data[5]
         today = today.split("day: ")[1].split(" – ")
         open = today[0].split(" ")
         closed = today[1].split(" ")
         open[0] = open[0].split(":")
         closed[0] = closed[0].split(":")
-        if open[1] == 'PM':
-            open[0][0] = str(int(open[0][0]) + 12)
-        if closed[1] == 'PM':
-            closed[0][0] = str(int(closed[0][0]) + 12)
-        if closed == [['12','00'], 'AM']:
-            closed = [['0','00'], 'AM']
-        return [open[0], closed[0]]
+        if len(open) == 2 and len(closed) == 2:
+            # case [['8', '00'], 'AM'][['10','00'], 'pm']
+            if closed[1] == 'PM':
+                closed[0][0] = str(int(closed[0][0]) + 12)
+            if closed == [['12','00'], 'AM']:
+                closed = [['0','00'], 'AM']
+            return [open[0], closed[0]]
+        elif len(open) ==1 and len(closed) ==2:
+            if closed[1] == 'PM':
+                closed[0][0] = str(int(closed[0][0]) + 12)
+            if closed == [['12','00'], 'AM']:
+                closed = [['0','00'], 'AM']
+            if not open == [['12', '00']]:
+                open[0][0] = str(int(open[0][0]) + 12)
+            return [open[0], closed[0]]
+        else:
+            return [open[0], closed[0]]
+
     except:
         return [["0","00"], ["23", "59"]]
 
