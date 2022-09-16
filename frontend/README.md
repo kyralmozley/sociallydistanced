@@ -1,6 +1,6 @@
 # sociallydistanced/frontend
 
-This folder contains the frontend app. It is maintained by @ElliottLMz.
+This folder contains the frontend app.
 
 ## Dev Server
 
